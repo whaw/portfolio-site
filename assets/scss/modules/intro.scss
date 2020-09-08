@@ -1,0 +1,43 @@
+.hero {
+  .text {
+    top: 30%;
+    z-index: 4;
+  }
+  h1 {
+    font-size: 2.5rem;
+    @include media-breakpoint-up(md){
+      font-size: 5vw;
+    }
+    @include media-breakpoint-up(xl){
+      font-size: 4rem;
+    }
+  }
+  h3 {
+    font-size: 1rem;
+    @include media-breakpoint-up(md){
+      font-size: 2.5vw;
+    }
+    @include media-breakpoint-up(xl){
+      font-size: 2rem;
+    }
+  }
+  &__left-frame,
+  &__right-frame {
+    z-index: 2;
+  }
+  &__left-frame { 
+    width: 13%;
+    bottom: -2%;
+  }
+  &__right-frame{
+    width: 27%;
+    right: 0;
+    bottom: -2%;
+  }
+  &__rider {
+    width: 20%;
+    right: 20%;
+    z-index: 3;
+    bottom: -5%;
+  }
+}
