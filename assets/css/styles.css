@@ -5704,48 +5704,147 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5 {
   font-weight: 600; }
 
 h1 {
   font-size: 4.5rem; }
 
-.hero .text {
-  top: 30%;
+.hero {
+  overflow: hidden;
+  padding-bottom: 4%; }
+  .hero .signature {
+    position: absolute;
+    top: -10%;
+    left: 1%;
+    perspective: 100px;
+    transition: 1s ease-out; }
+    .hero .signature.show {
+      top: 5%;
+      transition: .1s ease-in 2s; }
+      .hero .signature.show .signature__content {
+        animation: swing 1.5s ease-out 2s; }
+
+@keyframes swing {
+  0% {
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg); }
+  20% {
+    transform-style: preserve-3d;
+    transform: rotateX(10deg); }
+  40% {
+    transform-style: preserve-3d;
+    transform: rotateX(-5deg); }
+  60% {
+    transform-style: preserve-3d;
+    transform: rotateX(5deg); }
+  80% {
+    transform-style: preserve-3d;
+    transform: rotateX(-2deg); }
+  100% {
+    transform-style: preserve-3d;
+    transform: rotateX(0deg); } }
+  .hero .text {
+    top: 30%;
+    z-index: 4; }
+  .hero h1 {
+    font-size: 2.5rem; }
+    @media (min-width: 768px) {
+      .hero h1 {
+        font-size: 5.5vw; } }
+    @media (min-width: 1200px) {
+      .hero h1 {
+        font-size: 4.5rem; } }
+  .hero h3 {
+    font-size: 1rem; }
+    @media (min-width: 768px) {
+      .hero h3 {
+        font-size: 2.5vw; } }
+    @media (min-width: 1200px) {
+      .hero h3 {
+        font-size: 2rem; } }
+  .hero__left-frame, .hero__right-frame {
+    z-index: 2; }
+  .hero__left-frame {
+    width: 14%;
+    bottom: 3%;
+    left: -100%; }
+    .hero__left-frame.show {
+      left: 0;
+      transition: all 3s ease-out; }
+  .hero__right-frame {
+    width: 27%;
+    right: -100%;
+    bottom: 4%; }
+    .hero__right-frame.show {
+      right: 0;
+      transition: all 3s ease-out; }
+  .hero__rider {
+    width: 23%;
+    right: 20%;
+    z-index: 3;
+    bottom: -100%; }
+    .hero__rider.show {
+      bottom: 0;
+      transition: all 1.5s ease-out 2.5s; }
+
+.pin {
+  position: absolute;
   z-index: 4; }
+  .pin-3 {
+    left: 56%;
+    top: 7%; }
+  .pin-2 {
+    left: 78%;
+    top: 15%; }
+  .pin-1 {
+    left: 63%;
+    top: 25%; }
 
-.hero h1 {
-  font-size: 2.5rem; }
-  @media (min-width: 768px) {
-    .hero h1 {
-      font-size: 5vw; } }
-  @media (min-width: 1200px) {
-    .hero h1 {
-      font-size: 4rem; } }
+.pin:before {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: padding-box;
+  /* for Safari */
+  background-clip: padding-box;
+  /* for IE9+, Firefox 4+, Opera, Chrome */
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin-right: 60px;
+  opacity: 0; }
 
-.hero h3 {
-  font-size: 1rem; }
-  @media (min-width: 768px) {
-    .hero h3 {
-      font-size: 2.5vw; } }
-  @media (min-width: 1200px) {
-    .hero h3 {
-      font-size: 2rem; } }
+.pin:after {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  height: 1px;
+  width: 1px;
+  opacity: .6;
+  transition: all 750ms ease-in-out; }
 
-.hero__left-frame, .hero__right-frame {
-  z-index: 2; }
+.pin__text {
+  opacity: 0; }
 
-.hero__left-frame {
-  width: 13%;
-  bottom: -2%; }
+.pin.show:before {
+  opacity: 1;
+  transition: all 550ms ease-in-out .5s; }
 
-.hero__right-frame {
-  width: 27%;
-  right: 0;
-  bottom: -2%; }
+.pin.show:after {
+  width: 50px;
+  transition: all 550ms ease-in-out .5s; }
 
-.hero__rider {
-  width: 20%;
-  right: 20%;
-  z-index: 3;
-  bottom: -5%; }
+.pin.show .pin__text {
+  opacity: 1;
+  transition: all 550ms ease-in-out .5s;
+  transition-delay: 1s; }

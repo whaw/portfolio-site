@@ -1,4 +1,42 @@
 .hero {
+  overflow: hidden;
+  padding-bottom: 4%;
+  .signature {
+    position: absolute;
+    top: -10%;
+    left: 1%;
+    perspective: 100px;
+    transition: 1s ease-out;
+    &.show {
+      top: 5%;
+      transition: .1s ease-in 2s;
+      .signature__content {
+        animation: swing 1.5s ease-out 2s;
+       }
+    }
+  }
+
+  @keyframes swing {
+    0% {
+      transform-style: preserve-3d;
+      transform: rotateX(-10deg); }
+    20% {
+      transform-style: preserve-3d;
+      transform: rotateX(10deg); }
+    40% {
+      transform-style: preserve-3d;
+      transform: rotateX(-5deg); }
+    60% {
+      transform-style: preserve-3d;
+      transform: rotateX(5deg); }
+    80% {
+      transform-style: preserve-3d;
+      transform: rotateX(-2deg); }
+      100% {
+        transform-style: preserve-3d;
+        transform: rotateX(0deg); }
+  }
+
   .text {
     top: 30%;
     z-index: 4;
@@ -6,10 +44,10 @@
   h1 {
     font-size: 2.5rem;
     @include media-breakpoint-up(md){
-      font-size: 5vw;
+      font-size: 5.5vw;
     }
     @include media-breakpoint-up(xl){
-      font-size: 4rem;
+      font-size: 4.5rem;
     }
   }
   h3 {
@@ -26,18 +64,48 @@
     z-index: 2;
   }
   &__left-frame { 
-    width: 13%;
-    bottom: -2%;
+    width: 14%;
+    bottom: 3%;
+    left: -100%;
+    &.show {
+      left: 0;
+      transition: all 3s ease-out;
+    }
   }
   &__right-frame{
     width: 27%;
-    right: 0;
-    bottom: -2%;
+    right: -100%;
+    bottom: 4%;
+    &.show {
+      right: 0;
+      transition: all 3s ease-out;
+    }
   }
   &__rider {
-    width: 20%;
+    width: 23%;
     right: 20%;
     z-index: 3;
-    bottom: -5%;
+    bottom: -100%;
+    &.show {
+      bottom: 0;
+      transition: all 1.5s ease-out 2.5s;
+    }
+  }
+}
+
+.pin {
+  position: absolute;
+  z-index: 4;
+  &-3{
+    left: 56%;
+    top: 7%;
+  }
+  &-2 {
+    left: 78%;
+    top: 15%;
+  }
+  &-1 {
+    left: 63%;
+    top: 25%;
   }
 }
