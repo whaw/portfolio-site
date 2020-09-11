@@ -5714,18 +5714,15 @@ h1 {
 
 .hero {
   overflow: hidden;
-  padding-bottom: 4%; }
+  padding-bottom: 6%; }
   .hero .signature {
     position: absolute;
-    top: -10%;
+    top: 5%;
     left: 1%;
     perspective: 100px;
     transition: 1s ease-out; }
-    .hero .signature.show {
-      top: 5%;
-      transition: .1s ease-in 2s; }
-      .hero .signature.show .signature__content {
-        animation: swing 1.5s ease-out 2s; }
+    .hero .signature.animate .signature__content {
+      animation: swing 1.5s ease-out; }
 
 @keyframes swing {
   0% {
@@ -5768,46 +5765,45 @@ h1 {
   .hero__left-frame, .hero__right-frame {
     z-index: 2; }
   .hero__left-frame {
-    width: 14%;
+    width: 16%;
     bottom: 3%;
     left: -100%; }
-    .hero__left-frame.show {
+    .hero__left-frame.animate {
       left: 0;
       transition: all 3s ease-out; }
   .hero__right-frame {
-    width: 27%;
+    width: 28%;
     right: -100%;
     bottom: 4%; }
-    .hero__right-frame.show {
+    .hero__right-frame.animate {
       right: 0;
       transition: all 3s ease-out; }
   .hero__rider {
     width: 23%;
-    right: 20%;
+    right: 25%;
     z-index: 3;
     bottom: -100%; }
-    .hero__rider.show {
+    .hero__rider.animate {
       bottom: 0;
       transition: all 1.5s ease-out 2.5s; }
 
 .pin {
-  position: absolute;
   z-index: 4; }
   .pin-3 {
     left: 56%;
     top: 7%; }
   .pin-2 {
-    left: 78%;
-    top: 15%; }
+    left: 66%;
+    top: 14%; }
   .pin-1 {
     left: 63%;
-    top: 25%; }
+    top: 23%; }
 
 .pin:before {
   background-color: #fff;
   content: "";
   display: inline-block;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
   border-color: white;
   border-color: rgba(255, 255, 255, 0.5);
@@ -5827,7 +5823,7 @@ h1 {
   display: inline-block;
   position: absolute;
   left: 20px;
-  top: 50%;
+  top: 47%;
   height: 1px;
   width: 1px;
   opacity: .6;
@@ -5836,15 +5832,15 @@ h1 {
 .pin__text {
   opacity: 0; }
 
-.pin.show:before {
+.pin.animate:before {
   opacity: 1;
-  transition: all 550ms ease-in-out .5s; }
+  transition: all 550ms ease-out 5; }
 
-.pin.show:after {
+.pin.animate:after {
   width: 50px;
-  transition: all 550ms ease-in-out .5s; }
+  transition: all 550ms ease-out 5; }
 
-.pin.show .pin__text {
+.pin.animate .pin__text {
   opacity: 1;
-  transition: all 550ms ease-in-out .5s;
+  transition: all 550ms ease-out 5;
   transition-delay: 1s; }

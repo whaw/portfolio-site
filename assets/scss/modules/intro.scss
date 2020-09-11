@@ -1,17 +1,15 @@
 .hero {
   overflow: hidden;
-  padding-bottom: 4%;
+  padding-bottom: 6%;
   .signature {
     position: absolute;
-    top: -10%;
+    top: 5%;
     left: 1%;
     perspective: 100px;
     transition: 1s ease-out;
-    &.show {
-      top: 5%;
-      transition: .1s ease-in 2s;
+    &.animate {
       .signature__content {
-        animation: swing 1.5s ease-out 2s;
+        animation: swing 1.5s ease-out;
        }
     }
   }
@@ -64,29 +62,29 @@
     z-index: 2;
   }
   &__left-frame { 
-    width: 14%;
+    width: 16%;
     bottom: 3%;
     left: -100%;
-    &.show {
+    &.animate {
       left: 0;
       transition: all 3s ease-out;
     }
   }
   &__right-frame{
-    width: 27%;
+    width: 28%;
     right: -100%;
     bottom: 4%;
-    &.show {
+    &.animate {
       right: 0;
       transition: all 3s ease-out;
     }
   }
   &__rider {
     width: 23%;
-    right: 20%;
+    right: 25%;
     z-index: 3;
     bottom: -100%;
-    &.show {
+    &.animate {
       bottom: 0;
       transition: all 1.5s ease-out 2.5s;
     }
@@ -94,18 +92,17 @@
 }
 
 .pin {
-  position: absolute;
   z-index: 4;
   &-3{
     left: 56%;
     top: 7%;
   }
   &-2 {
-    left: 78%;
-    top: 15%;
+    left: 66%;
+    top: 14%;
   }
   &-1 {
     left: 63%;
-    top: 25%;
+    top: 23%;
   }
 }

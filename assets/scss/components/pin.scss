@@ -4,7 +4,7 @@
     background-color: #fff;
     content: "";
     display: inline-block;
-    border-width: 5px;
+    border-width: 4px;
     border-style: solid;
     border-color: rgb(255, 255, 255);
     border-color: rgba(255, 255, 255, .5);
@@ -23,7 +23,7 @@
     display: inline-block;
     position: absolute;
     left: 20px;
-    top: 50%;
+    top: 47%;
     height: 1px;
     width: 1px;
     opacity: .6;
@@ -34,11 +34,11 @@
   }
 
   @mixin pin-transition {
-    transition: all 550ms ease-in-out .5s;
+    transition: all 550ms ease-out 5;
   }
 
-  // SHOW
-  &.show {
+  // ANIMATE
+  &.animate {
     &:before {
       opacity: 1;
       @include pin-transition;
