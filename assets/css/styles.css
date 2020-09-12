@@ -5827,20 +5827,20 @@ h1 {
   height: 1px;
   width: 1px;
   opacity: .6;
-  transition: all 750ms ease-in-out; }
+  transition: all 500ms ease-in-out; }
 
 .pin__text {
   opacity: 0; }
 
 .pin.animate:before {
   opacity: 1;
-  transition: all 550ms ease-out 5; }
+  transition: all 550ms ease-out; }
 
 .pin.animate:after {
   width: 50px;
-  transition: all 550ms ease-out 5; }
+  transition: all 550ms ease-out; }
 
 .pin.animate .pin__text {
   opacity: 1;
-  transition: all 550ms ease-out 5;
-  transition-delay: 1s; }
+  transition: all 550ms ease-out;
+  transition-delay: 750ms; }

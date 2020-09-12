@@ -19,14 +19,17 @@ var heroAnim = {
    this.animate(this.$rider);
    setTimeout(function(){
     heroAnim.animate(heroAnim.$pin, 'staggered');
-   }, 5000);
+   }, 4000);
+   setTimeout(function(){
+    heroAnim.animate(heroAnim.$signature);
+   }, 6000);
   },
-  animate: function(array, animType){
-    array.forEach((element, i) => {
+  animate: function(arr, animType){
+    arr.forEach((element, i) => {
       if (animType == 'staggered'){
         setTimeout(function(){
           $(element).addClass('animate');
-         }, 1000);
+        }, i * 500)
       } else {
         $(element).addClass('animate');
       }

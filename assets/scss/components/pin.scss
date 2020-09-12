@@ -27,17 +27,17 @@
     height: 1px;
     width: 1px;
     opacity: .6;
-    transition: all 750ms ease-in-out;
+    transition: all 500ms ease-in-out;
   }
   &__text {
     opacity: 0;
   }
 
   @mixin pin-transition {
-    transition: all 550ms ease-out 5;
+    transition: all 550ms ease-out;
   }
 
-  // ANIMATE
+  // animate
   &.animate {
     &:before {
       opacity: 1;
@@ -50,7 +50,7 @@
     .pin__text {
       opacity: 1;
       @include pin-transition;
-      transition-delay: 1s;
+      transition-delay: 750ms;
     }
   }
 }
