@@ -1,6 +1,8 @@
 .pin {
+  opacity: 0;
   // pin dot
   &:before {
+    opacity: .8;
     background-color: #fff;
     content: "";
     display: inline-block;
@@ -11,46 +13,30 @@
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     border-radius: 50%;
-    height: 15px;
-    width: 15px;
-    margin-right: 60px;
-    opacity: 0;
+    height: 10px;
+    width: 10px;
+    margin-right: 55px;
   }
   // pin line
   &:after {
+    opacity: .8;
     background-color: #fff;
     content: "";
     display: inline-block;
     position: absolute;
-    left: 20px;
-    top: 47%;
+    left: 15px;
+    top: 54%;
     height: 1px;
-    width: 1px;
-    opacity: .6;
-    transition: all 500ms ease-in-out;
+    width: 45px;
   }
-  &__text {
-    opacity: 0;
-  }
-
-  @mixin pin-transition {
-    transition: all 550ms ease-out;
-  }
-
-  // animate
   &.animate {
-    &:before {
+    @include media-breakpoint-up(md){
       opacity: 1;
-      @include pin-transition;
-    }
-    &:after {
-      width: 50px;
-      @include pin-transition;
-    }
-    .pin__text {
-      opacity: 1;
-      @include pin-transition;
-      transition-delay: 750ms;
+      transition: opacity .5s ease-out;
+      perspective: 100px;
+      .pin__text {
+        animation: swing 1.5s ease-out .5s;
+      }
     }
   }
 }

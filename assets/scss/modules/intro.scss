@@ -5,37 +5,8 @@
     position: absolute;
     top: 5%;
     left: 1%;
-    perspective: 100px;
-    transition: 1s ease-out;
-    &.animate {
-      .signature__content {
-        animation: swing 1.5s ease-out;
-       }
-    }
   }
-
-  @keyframes swing {
-    0% {
-      transform-style: preserve-3d;
-      transform: rotateX(-10deg); }
-    20% {
-      transform-style: preserve-3d;
-      transform: rotateX(10deg); }
-    40% {
-      transform-style: preserve-3d;
-      transform: rotateX(-5deg); }
-    60% {
-      transform-style: preserve-3d;
-      transform: rotateX(5deg); }
-    80% {
-      transform-style: preserve-3d;
-      transform: rotateX(-2deg); }
-      100% {
-        transform-style: preserve-3d;
-        transform: rotateX(0deg); }
-  }
-
-  .text {
+  .heading {
     top: 30%;
     z-index: 4;
   }
@@ -90,7 +61,6 @@
     }
   }
 }
-
 .pin {
   z-index: 4;
   &-3{

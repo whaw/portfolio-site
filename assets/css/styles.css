@@ -5699,51 +5699,14 @@ body {
   max-width: 1200px;
   margin: 0 auto; }
 
-body {
-  font-family: 'Source Sans Pro', sans-serif; }
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-weight: 600; }
-
-h1 {
-  font-size: 4.5rem; }
-
 .hero {
   overflow: hidden;
   padding-bottom: 6%; }
   .hero .signature {
     position: absolute;
     top: 5%;
-    left: 1%;
-    perspective: 100px;
-    transition: 1s ease-out; }
-    .hero .signature.animate .signature__content {
-      animation: swing 1.5s ease-out; }
-
-@keyframes swing {
-  0% {
-    transform-style: preserve-3d;
-    transform: rotateX(-10deg); }
-  20% {
-    transform-style: preserve-3d;
-    transform: rotateX(10deg); }
-  40% {
-    transform-style: preserve-3d;
-    transform: rotateX(-5deg); }
-  60% {
-    transform-style: preserve-3d;
-    transform: rotateX(5deg); }
-  80% {
-    transform-style: preserve-3d;
-    transform: rotateX(-2deg); }
-  100% {
-    transform-style: preserve-3d;
-    transform: rotateX(0deg); } }
-  .hero .text {
+    left: 1%; }
+  .hero .heading {
     top: 30%;
     z-index: 4; }
   .hero h1 {
@@ -5799,48 +5762,59 @@ h1 {
     left: 63%;
     top: 23%; }
 
-.pin:before {
-  background-color: #fff;
-  content: "";
-  display: inline-block;
-  border-width: 4px;
-  border-style: solid;
-  border-color: white;
-  border-color: rgba(255, 255, 255, 0.5);
-  -webkit-background-clip: padding-box;
-  /* for Safari */
-  background-clip: padding-box;
-  /* for IE9+, Firefox 4+, Opera, Chrome */
-  border-radius: 50%;
-  height: 15px;
-  width: 15px;
-  margin-right: 60px;
+.pin {
   opacity: 0; }
+  .pin:before {
+    opacity: .8;
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    border-width: 4px;
+    border-style: solid;
+    border-color: white;
+    border-color: rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: padding-box;
+    /* for Safari */
+    background-clip: padding-box;
+    /* for IE9+, Firefox 4+, Opera, Chrome */
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    margin-right: 55px; }
+  .pin:after {
+    opacity: .8;
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 15px;
+    top: 54%;
+    height: 1px;
+    width: 45px; }
+  @media (min-width: 768px) {
+    .pin.animate {
+      opacity: 1;
+      transition: opacity .5s ease-out;
+      perspective: 100px; }
+      .pin.animate .pin__text {
+        animation: swing 1.5s ease-out .5s; } }
 
-.pin:after {
-  background-color: #fff;
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 20px;
-  top: 47%;
-  height: 1px;
-  width: 1px;
-  opacity: .6;
-  transition: all 500ms ease-in-out; }
-
-.pin__text {
-  opacity: 0; }
-
-.pin.animate:before {
-  opacity: 1;
-  transition: all 550ms ease-out; }
-
-.pin.animate:after {
-  width: 50px;
-  transition: all 550ms ease-out; }
-
-.pin.animate .pin__text {
-  opacity: 1;
-  transition: all 550ms ease-out;
-  transition-delay: 750ms; }
+@keyframes swing {
+  0% {
+    transform-style: preserve-3d;
+    transform: rotateX(-20); }
+  20% {
+    transform-style: preserve-3d;
+    transform: rotateX(20deg); }
+  40% {
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg); }
+  60% {
+    transform-style: preserve-3d;
+    transform: rotateX(5deg); }
+  80% {
+    transform-style: preserve-3d;
+    transform: rotateX(-2deg); }
+  100% {
+    transform-style: preserve-3d;
+    transform: rotateX(0deg); } }

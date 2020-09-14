@@ -1,6 +1,5 @@
-var heroAnim = {
-  playing: false,
-  animElements: ['js_frame', 'js_rider', 'js_pin', 'js_signature'],
+var Hero = {
+  animElements: ['js_frame', 'js_rider', 'js_pin'],
   init: function(){
     this.addAnimElements();
     this.render();
@@ -8,7 +7,7 @@ var heroAnim = {
   addAnimElements: function(){
     this.animElements.forEach(element => {
       var objectProp = this.convertName(element);
-      heroAnim[objectProp] = $.makeArray($('.' + element));
+      Hero[objectProp] = $.makeArray($('.' + element));
     });
   },
   convertName: function(element){
@@ -18,18 +17,15 @@ var heroAnim = {
    this.animate(this.$frame);
    this.animate(this.$rider);
    setTimeout(function(){
-    heroAnim.animate(heroAnim.$pin, 'staggered');
+    Hero.animate(Hero.$pin, 'staggered');
    }, 4000);
-   setTimeout(function(){
-    heroAnim.animate(heroAnim.$signature);
-   }, 6000);
   },
   animate: function(arr, animType){
     arr.forEach((element, i) => {
       if (animType == 'staggered'){
         setTimeout(function(){
           $(element).addClass('animate');
-        }, i * 500)
+        }, i * 300)
       } else {
         $(element).addClass('animate');
       }
@@ -38,8 +34,5 @@ var heroAnim = {
 }
 
 $('document').ready(function(){
-  heroAnim.init();
-
-
-  // confirm usable format
+  Hero.init();
 });
