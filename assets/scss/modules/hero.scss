@@ -1,6 +1,8 @@
 .hero {
   overflow: hidden;
   padding-bottom: 6%;
+  margin-top: $container-vert-spacing;
+  margin-bottom: $container-vert-spacing;
   .signature {
     position: absolute;
     top: 5%;
@@ -33,8 +35,8 @@
     z-index: 2;
   }
   &__left-frame { 
-    width: 16%;
-    bottom: 3%;
+    width: 12%;
+    bottom: 7%;
     left: -100%;
     &.animate {
       left: 0;
@@ -42,9 +44,9 @@
     }
   }
   &__right-frame{
-    width: 28%;
+    width: 19%;
     right: -100%;
-    bottom: 4%;
+    bottom: 7%;
     &.animate {
       right: 0;
       transition: all 3s ease-out;

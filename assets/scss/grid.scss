@@ -1,5 +1,10 @@
+$container-vert-spacing: 100px;
+
 html,
 body {
   max-width: 1200px;
   margin: 0 auto;
+}
+.container {
+  padding-bottom: $container-vert-spacing;
 }
