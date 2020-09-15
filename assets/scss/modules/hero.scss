@@ -1,15 +1,14 @@
 .hero {
   overflow: hidden;
   padding-bottom: 6%;
-  margin-top: $container-vert-spacing;
-  margin-bottom: $container-vert-spacing;
+  margin-top: 50px;
   .signature {
     position: absolute;
-    top: 5%;
+    top: 0%;
     left: 1%;
   }
   .heading {
-    top: 30%;
+    top: 25%;
     z-index: 4;
   }
   h1 {
@@ -53,7 +52,7 @@
     }
   }
   &__rider {
-    width: 23%;
+    width: 20%;
     right: 25%;
     z-index: 3;
     bottom: -100%;
@@ -65,16 +64,16 @@
 }
 .pin {
   z-index: 4;
-  &-3{
+  &-3 {
     left: 56%;
-    top: 7%;
+    top: 3%;
   }
   &-2 {
     left: 66%;
-    top: 14%;
+    top: 10%;
   }
   &-1 {
     left: 63%;
-    top: 23%;
+    top: 15%;
   }
 }

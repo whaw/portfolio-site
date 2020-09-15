@@ -1,10 +1,12 @@
-$container-vert-spacing: 100px;
-
 html,
 body {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
+
+section {
+  margin-bottom: 150px;
+}
 .container {
-  padding-bottom: $container-vert-spacing;
+
 }
