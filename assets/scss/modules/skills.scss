@@ -1,8 +1,70 @@
+@mixin skills-shared {
+  background-repeat: no-repeat;
+  background-size: 26%;
+  left: 36%;
+}
 .skills {
-  &.contour-map {
-    background-image: url(../assets/images/contour-map.png);
-    background-size: cover;
-    background-blend-mode: hard-light;
-
+  &__content {
+    &:before,
+    &:after {
+      content: '';
+      background-image: url(../../assets/images/skills-dots.png);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      @include skills-shared;
+      opacity: 0;
+    }
+    &:after {
+      background-image: url(../../assets/images/skills-shadow.png);
+    }
+    &.animate {
+      &:before {
+        animation: skills-dots 1s ease-out 100ms;
+      }
+      &:after {
+        animation: skills-shadow 1s ease-out;
+      }
+      .skills__rider--color {
+        opacity: 1;
+        transition: opacity 1s ease-out 0.75s;
+      }
+    }
+    .skills__rider,
+    .skills__rider--color {
+      opacity: 1;
+      position: absolute;
+      z-index: 2;
+      @include skills-shared;
+      width: 26%;
+      left: 38%;
+    }
+    .skills__rider--color {
+      opacity: 0;
+      z-index: 3;
+    }
+  }
+  .bullet:before {
+    width: 8.5px;
+    height: 8.5px;
+    background-color: #8a8a8a;
+    display: inline-block;
+    content: ".";
+    margin: 0 8px 3px 0;
+    text-indent: -8.5px;
+    overflow: hidden;
+    border-radius: 8.5px;
   }
 }
+@keyframes skills-dots {
+  0% { left: 38%; opacity: 1; }
+  50% { left: 28% }
+  100% { left: 36% }
+}
+@keyframes skills-shadow {
+  0% { left: 24%; opacity: 1; }
+  50% { left: 38% }
+  100% { left: 36% }
+}
+
