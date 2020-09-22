@@ -27,10 +27,16 @@
       &:after {
         animation: skills-shadow 1s ease-out;
       }
+      .skills__rider {
+        opacity: .8;
+      }
       .skills__rider--color,
-      x.skills__lines {
+      .skills__lines {
         opacity: 1;
         transition: opacity 1s ease-out 0.75s;
+      }
+      .skills__lines {
+        opacity: .5;
       }
     }
   }
@@ -48,7 +54,8 @@
     z-index: 3;
   }
   &__lines {
-    background: 12px 0 / 89% auto no-repeat url(../../assets/images/skills-lines.png);
+    top: 47px;
+    left: 61px;
     opacity: 0;
     z-index: 4;
   }

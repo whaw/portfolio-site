@@ -2,6 +2,11 @@
   overflow: hidden;
   padding-bottom: 9%;
   margin-top: 50px;
+  filter: grayscale(1);
+  &.animate {
+    filter: grayscale(0);
+    transition: all 1s ease-out 4s;
+  }
   .signature {
     position: absolute;
     top: 0%;
@@ -101,12 +106,12 @@
 .pin {
   z-index: 4;
   &-3 {
-    left: 56%;
-    top: 3%;
+    left: 58%;
+    top: 2%;
   }
   &-2 {
-    left: 66%;
-    top: 10%;
+    left: 65%;
+    top: 8%;
   }
   &-1 {
     left: 63%;

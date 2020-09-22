@@ -1,5 +1,5 @@
 var Hero = {
-  animElements: ['js_frame', 'js_rider', 'js_pin', 'js_signature'],
+  animElements: ['js_frame', 'js_rider', 'js_pin', 'js_signature', 'js_hero'],
   init: function(){
     this.addAnimElements();
     this.render();
@@ -14,6 +14,7 @@ var Hero = {
     return '$' + element.replace('js_', '');
   },
   render: function(){
+   this.animate(this.$hero);
    this.animate(this.$frame);
    this.animate(this.$rider);
    setTimeout(function(){
