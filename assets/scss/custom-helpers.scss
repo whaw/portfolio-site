@@ -1,0 +1,14 @@
+
+.explode {
+  &--top {
+    margin-top: -50px;
+  }
+}
+
+.drop-shadow {
+  filter: drop-shadow(-30px 20px 4px #aaa);
+}
+
+.grayscale {
+  filter: grayscale(1);
+}

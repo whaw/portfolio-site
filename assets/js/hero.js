@@ -1,5 +1,5 @@
 var Hero = {
-  animElements: ['js_frame', 'js_rider', 'js_pin'],
+  animElements: ['js_frame', 'js_rider', 'js_pin', 'js_signature'],
   init: function(){
     this.addAnimElements();
     this.render();
@@ -19,6 +19,7 @@ var Hero = {
    setTimeout(function(){
     Hero.animate(Hero.$pin, 'staggered');
    }, 4000);
+   this.animate(this.$signature);
   },
   animate: function(arr, animType){
     arr.forEach((element, i) => {
