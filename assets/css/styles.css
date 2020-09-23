@@ -4968,13 +4968,8 @@ body {
   margin: 0 auto; }
 
 section {
-  margin-bottom: 250px; }
-
-.hero {
-  margin-bottom: 200px; }
-
-.section__header {
-  padding-bottom: 100px; }
+  padding-top: 110px;
+  margin-top: 140px; }
 
 .display-1, .display-2, .display-3, .display-4 {
   color: #000; }
@@ -4982,15 +4977,25 @@ section {
 .explode--top {
   margin-top: -50px; }
 
+.section__header {
+  padding-bottom: 100px; }
+
 .drop-shadow {
   filter: drop-shadow(-30px 20px 4px #aaa); }
 
 .grayscale {
   filter: grayscale(1); }
 
+.dog {
+  position: absolute;
+  z-index: 2;
+  width: 50%;
+  bottom: 7%;
+  right: -12%; }
+
 .hero {
   overflow: hidden;
-  padding-bottom: 9%;
+  padding-bottom: 7%;
   margin-top: 50px;
   filter: grayscale(1); }
   .hero.animate {
@@ -5048,7 +5053,7 @@ section {
     z-index: 2; }
   .hero__left-frame {
     width: 12%;
-    bottom: 12%;
+    bottom: 9%;
     left: -100%; }
     .hero__left-frame.animate {
       left: 0;
@@ -5056,7 +5061,7 @@ section {
   .hero__right-frame {
     width: 19%;
     right: -100%;
-    bottom: 15%; }
+    bottom: 12%; }
     .hero__right-frame.animate {
       right: 0;
       transition: all 3s ease-out; }
@@ -5103,10 +5108,10 @@ section {
   .skills__content.animate .skills__rider {
     opacity: .8; }
   .skills__content.animate .skills__rider--color,
-  .skills__content.animate .skills__lines {
+  .skills__content.animate x.skills__lines {
     opacity: 1;
     transition: opacity 1s ease-out 0.75s; }
-  .skills__content.animate .skills__lines {
+  .skills__content.animate x.skills__lines {
     opacity: .5; }
   .skills__rider, .skills__rider--color {
     opacity: 1;

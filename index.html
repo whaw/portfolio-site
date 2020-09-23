@@ -4,37 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/hero.js"></script>
   <script src="assets/js/skills.js"></script>
+  <script src="assets/js/script.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
-<body data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-  <nav id="navbar-example2" class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-    <a class="navbar-brand" href="#">A Working Copy</a>
+<body data-spy="scroll" data-target="#navbar-example2" data-offset="0" id="hero">
+  <nav id="navbar-example2" class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
+    <a class="navbar-brand" href="#"><span class="display-4">Will H/</span> <small>Front End Developer, User Advocate, Outdoor Enthusiast</small></a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-        <a class="nav-item nav-link" href="#skills">Skills</a>
-        <a class="nav-item nav-link" href="#">Clients</a>
-        <a class="nav-item nav-link" href="#">About</a>
+        <a class="nav-item nav-link active" href="#hero">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#skills">What I bring...</a>
+        <a class="nav-item nav-link" href="#clients">Some Clients</a>
+        <a class="nav-item nav-link" href="#introductions">Introductions</a>
       </div>
     </div>
   </nav>
   <header>
     <div class="jumbotron hero position-relative js_hero">
-      <div class="signature js_signature">
-        <div class="signature__content">
-          <h3 class="mb-0">Will H/</h3>
-          <small>Front End Developer, User Advocate, Outdoor Enthusiast</small>
-        </div>
-      </div>
       <div class="heading text-center position-absolute w-100">
         <div class="display-3 text-black">Aiming <span class="text-white">for Experiences</span></div>
         <h3 class="text-white">that exceed expectations... while having some fun</h3>
@@ -56,7 +51,7 @@
       </div>
       <div class="pin text-white pin-3 position-absolute js_pin">
         <div class="pin__text position-absolute d-inline text-nowrap">
-          <small>Success!</small>
+          <small>Success!<br> Building experiences</small>
         </div>
       </div>
     </div>
@@ -121,7 +116,7 @@
         </div>
       </div>
     </section>
-    <section id="client" class="clients">
+    <section id="clients" class="clients">
       <div class="container section__header">
         <div class="row">
           <div class="col text-center">
@@ -170,20 +165,22 @@
           </div>
       </div>
     </section>
-    <section id="about" class="introductions">
+    
+    <section id="introductions" class="introductions">
       <div class="container section__header">
         <div class="row">
-          <div class="col">
-            <h2 class="text-center">Introductions</h2>
-            <h3 class="text-center text-secondary">Give me a shout. I'm up for anything.</h3>
+          <div class="col text-center">
+            <h2>Introductions</h2>
+            <h3 class="text-secondary">Give me a shout. I'm up for anything.</h3>
           </div>
         </div>
       </div>
       <div class="bg-light">
         <div class="container">
           <div class="row">
-            <div class="col-4">
-              <img src="assets/images/me.png" class="img-fluid explode--top drop-shadow" alt="">
+            <div class="col-4 pr-5">
+              <img src="assets/images/me.png" class="position-absolute img-fluid explode--top drop-shadow" style="z-index: 1" alt="">
+              <img src="assets/images/dog.png" class="dog">
             </div>
             <div class="col-8 p-5">
               <h3>William has a wide view on the web development process.</h3>
@@ -192,6 +189,8 @@
               <p>Driven to produce better web content for all, he has helped companies such as Anderson DDB, Transcontinental, Marsh STARS and many more meet their web objectives, while earning the appreciation of happy clients and a few awards along the way.</p>
               <p>And when he's not living in digital space, he can be found in the great outdoors. He loves the outdoors. Like, loves loves the outdoors, and MEC.</p>
               <p><a class="btn btn-primary" href="#" role="button">CV</a></p>
+              <p>Sometimes it's just for fun :) Holla ... <br>
+                <span class="text-secondary">1 (416) 627-7141 (Toronto, Canada), hello at whaw.com</span></p>
             </div>
         </div>
       </div>
