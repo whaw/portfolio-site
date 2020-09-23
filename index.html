@@ -9,8 +9,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/hero.js"></script>
+  <script src="assets/js/skills.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+  <nav id="navbar-example2" class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+    <a class="navbar-brand" href="#">A Working Copy</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="#skills">Skills</a>
+        <a class="nav-item nav-link" href="#">Clients</a>
+        <a class="nav-item nav-link" href="#">About</a>
+      </div>
+    </div>
+  </nav>
   <header>
     <div class="jumbotron hero position-relative js_hero">
       <div class="signature js_signature">
@@ -46,7 +62,7 @@
     </div>
   </header>
   <main>
-    <section class="skills">
+    <section id="skills" class="skills">
       <div class="container section__header">
         <div class="row">
           <div class="col text-center">
@@ -56,7 +72,7 @@
         </div>
       </div>
       <div class="container">
-        <div class="row skills__content border bg-light p-5 position-relative">
+        <div class="row skills__content border bg-light p-5 position-relative js_skills">
           <img src="assets/images/skills-rider.png" class="skills__rider drop-shadow">
           <img src="assets/images/skills-rider-color.png" class="skills__rider--color drop-shadow">
           <img src="assets/images/skills-lines.png" class="position-absolute skills__lines">
@@ -105,7 +121,7 @@
         </div>
       </div>
     </section>
-    <section class="clients">
+    <section id="client" class="clients">
       <div class="container section__header">
         <div class="row">
           <div class="col text-center">
@@ -154,7 +170,7 @@
           </div>
       </div>
     </section>
-    <section class="introductions">
+    <section id="about" class="introductions">
       <div class="container section__header">
         <div class="row">
           <div class="col">

@@ -20,23 +20,23 @@
   @keyframes swing-signature {
     0% {
       transform-style: preserve-3d;
-      transform: rotateX(60);
+      transform: rotateX(-60);
     }
     20% {
       transform-style: preserve-3d;
-      transform: rotateX(-50deg);
+      transform: rotateX(50deg);
     }
     40% {
       transform-style: preserve-3d;
-      transform: rotateX(40deg);
+      transform: rotateX(-40deg);
     }
     60% {
       transform-style: preserve-3d;
-      transform: rotateX(-30deg);
+      transform: rotateX(30deg);
     }
     80% {
       transform-style: preserve-3d;
-      transform: rotateX(20deg);
+      transform: rotateX(-20deg);
     }
     100% {
       transform-style: preserve-3d;
