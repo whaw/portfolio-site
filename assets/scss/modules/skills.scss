@@ -22,7 +22,7 @@
     }
     &.animate {
       &:before {
-        animation: skills-dots 1s ease-out 100ms;
+        animation: skills-dots 1.1s ease-out 100ms;
       }
       &:after {
         animation: skills-shadow 1s ease-out;
@@ -31,11 +31,11 @@
         opacity: .8;
       }
       .skills__rider--color,
-      x.skills__lines {
+      .skills__lines {
         opacity: 1;
         transition: opacity 1s ease-out 0.75s;
       }
-      x.skills__lines {
+      .skills__lines {
         opacity: .5;
       }
     }
@@ -56,6 +56,7 @@
   &__lines {
     top: 47px;
     left: 61px;
+    width: 90%;
     opacity: 0;
     z-index: 4;
   }
