@@ -20,45 +20,60 @@
     &:after {
       background-image: url(../../assets/images/skills-shadow.png);
     }
-    &.animate {
-      &:before {
-        animation: skills-dots 1.1s ease-out 100ms;
-      }
-      &:after {
-        animation: skills-shadow 1s ease-out;
-      }
-      .skills__rider {
-        opacity: .8;
-      }
-      .skills__rider--color,
-      .skills__lines {
-        opacity: 1;
-        transition: opacity 1s ease-out 0.75s;
-      }
-      .skills__lines {
-        opacity: .5;
+    @include media-breakpoint-up(lg){
+      &.animate {
+        &:before {
+          animation: skills-dots 1.1s ease-out 100ms;
+        }
+        &:after {
+          animation: skills-shadow 1s ease-out;
+        }
+        .skills__rider {
+          opacity: .8;
+        }
+        .skills__rider--color,
+        .skills__lines {
+          opacity: 1;
+          transition: opacity 1s ease-out 0.75s;
+        }
+        .skills__lines {
+          opacity: .5;
+        }
       }
     }
   }
-  &__rider,
-  &__rider--color {
-    opacity: 1;
-    position: absolute;
-    z-index: 2;
-    @include skills-shared;
-    width: 50%;
-    left: 28%;
+  @include media-breakpoint-down(md){
+    &__rider,
+    &__lines {
+      display: none;
+    }
+    &__rider--color {
+      width: 80%;
+      margin-left: 15%;
+    }
   }
-  &__rider--color {
-    opacity: 0;
-    z-index: 3;
-  }
-  &__lines {
-    top: 47px;
-    left: 61px;
-    width: 90%;
-    opacity: 0;
-    z-index: 4;
+  @include media-breakpoint-up(lg){
+    &__rider,
+    &__rider--color {
+      opacity: 1;
+      position: absolute;
+      z-index: 2;
+      @include skills-shared;
+      width: 50%;
+      left: 28%;
+    }
+    &__rider--color {
+      opacity: 0;
+      position: absolute;
+      z-index: 3;
+    }
+    &__lines {
+      top: 47px;
+      left: 61px;
+      width: 90%;
+      opacity: 0;
+      z-index: 4;
+    }
   }
   .bullet:before {
     width: 8.5px;
@@ -73,6 +88,14 @@
   }
   .drop-shadow {
     filter: drop-shadow(-30px 20px 4px #aaa);
+  }
+  &__text {
+    &--em {
+      color: $brown;
+      @include media-breakpoint-down(md){
+        color: $orange;
+      }
+    }
   }
 }
 @keyframes skills-dots {

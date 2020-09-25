@@ -1,9 +1,43 @@
-
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+@include media-breakpoint-up(sm){
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+@include media-breakpoint-up(md){
+  h2 {
+    font-size: 3.25rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+@include media-breakpoint-up(xl){
+  h2 {
+    font-size: $h2-font-size;
+  }
+  h3 {
+    font-size: $h3-font-size;
+  }
+}
 .display {
   &-1,
   &-2,
   &-3,
   &-4 {
     color: $headings-color;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .display-4 {
+    font-size: 2rem;
   }
 }

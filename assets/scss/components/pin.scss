@@ -15,7 +15,7 @@
     border-radius: 50%;
     height: 10px;
     width: 10px;
-    margin-right: 45px;
+    margin-right: 25px;
   }
   // pin line
   &:after {
@@ -27,16 +27,6 @@
     left: 15px;
     top: 54%;
     height: 1px;
-    width: 35px;
-  }
-  &.animate {
-    @include media-breakpoint-up(md){
-      opacity: 1;
-      transition: opacity .5s ease-out;
-      perspective: 100px;
-      .pin__text {
-        animation: swing 1.5s ease-out .5s;
-      }
-    }
+    width: 15px;
   }
 }

@@ -6,6 +6,35 @@ body {
 
 // adjust for nav link targeting
 section {
-  padding-top: 110px;
-  margin-top: 140px;
+  padding-top: 30px;
+  margin-top: 30px;
+  @include media-breakpoint-up(md){
+    padding-top: 75px;
+    margin-top: 75px;
+  }
+  @include media-breakpoint-up(xl){
+    padding-top: 110px;
+    margin-top: 110px;
+  }
+}
+
+// GRID HELPERS
+.section__header {
+  padding-bottom: 40px;
+  @include media-breakpoint-up(md){
+    padding-bottom: 100px;
+  }
+}
+// used to take image out of section/container/background
+// ie. used in Introductions section
+.explode--top {
+  margin-top: -20%;
+}
+@include media-breakpoint-down(md){
+  .explode--top--md {
+    margin-top: -20%;
+    &__container {
+      margin-top: 10%;
+    }
+  }
 }

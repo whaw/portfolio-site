@@ -1,11 +1,4 @@
 // HELPERS
-// GRID
-.explode--top {
-  margin-top: -50px;
-}
-.section__header {
-  padding-bottom: 100px;
-}
 
 // IMAGE
 .drop-shadow {
@@ -17,15 +10,37 @@
 
 
 .dog {
-  position: absolute;
   z-index: 2;
   width: 50%;
-  bottom: -10%;
-  right: -23%;
+  bottom: 7%;
+  right: 0%;
+  @include media-breakpoint-up(lg){
+    right: -23%;
+  }
+}
+.speech-bubble {
+  z-index: 3;
+  width: 35%;
+  bottom: 5%;
+  right: -35%;
   opacity: 0;
+  filter: drop-shadow(-3px 3px 1px #000);
   &.animate {
-    bottom: 7%;
+    animation: bubble .7s ease-out;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes bubble {
+  0% {
     opacity: 1;
-    transition: all 1s ease-out 2s;
+    bottom: 5%;
+  }
+  70% {
+    bottom: 36%;
+  }
+  100% {
+    bottom: 35%;
+    opacity: 1;
   }
 }
