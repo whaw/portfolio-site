@@ -13,18 +13,18 @@
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
     border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    margin-right: 25px;
+    height: 8px;
+    width: 8px;
+    margin-right: 20px;
   }
   // pin line
   &:after {
-    opacity: .8;
+    opacity: .6;
     background-color: #fff;
     content: "";
     display: inline-block;
     position: absolute;
-    left: 15px;
+    left: 10px;
     top: 54%;
     height: 1px;
     width: 15px;

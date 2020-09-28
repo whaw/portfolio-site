@@ -137,8 +137,8 @@
     top: 2.5%;
   }
   &-2 {
-    left: 65%;
-    top: 9%;
+    left: 60%;
+    top: 7%;
   }
   &-1 {
     left: 63%;
@@ -150,7 +150,7 @@
       transition: opacity .5s ease-out;
       perspective: 100px;
       .pin__text {
-        animation: swing 1.5s ease-out .5s;
+        animation: swing 1s ease-out .5s;
       }
     }
   }
