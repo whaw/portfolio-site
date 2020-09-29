@@ -1,0 +1,52 @@
+.navbar-brand {
+  @include media-breakpoint-down(sm){
+    font-size: 1.5rem;
+  }
+  small {
+    font-size: 50%;
+    @include media-breakpoint-up(md){
+      font-size: 35%;
+    }
+    @include media-breakpoint-up(lg){
+      font-size: 40%;
+    }
+
+  }
+  &.animate {
+    perspective: 100px;
+    animation: swing-signature 3s ease-in-out 5s;
+  }
+}
+@keyframes swing-signature {
+  0% {
+    transform-style: preserve-3d;
+    transform: rotateX(-60);
+  }
+  20% {
+    transform-style: preserve-3d;
+    transform: rotateX(50deg);
+  }
+  40% {
+    transform-style: preserve-3d;
+    transform: rotateX(-40deg);
+  }
+  60% {
+    transform-style: preserve-3d;
+    transform: rotateX(30deg);
+  }
+  80% {
+    transform-style: preserve-3d;
+    transform: rotateX(-20deg);
+  }
+  100% {
+    transform-style: preserve-3d;
+    transform: rotateX(0deg); 
+  }
+}
+// remove hamburger button outline
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}

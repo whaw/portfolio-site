@@ -6,7 +6,7 @@
  */
 
 @import "node_modules/bootstrap/scss/functions";
-@import "../scss/vendors/bootstrap-vars";
+@import "../scss/bootstrap-vars-overwrite";
 @import "node_modules/bootstrap/scss/mixins";
 @import "node_modules/bootstrap/scss/root";
 @import "node_modules/bootstrap/scss/reboot";
@@ -14,8 +14,8 @@
 @import "node_modules/bootstrap/scss/images";
 @import "node_modules/bootstrap/scss/code";
 @import "node_modules/bootstrap/scss/grid";
-@import "node_modules/bootstrap/scss/tables";
-@import "node_modules/bootstrap/scss/forms";
+// @import "node_modules/bootstrap/scss/tables";
+// @import "node_modules/bootstrap/scss/forms";
 @import "node_modules/bootstrap/scss/buttons";
 @import "node_modules/bootstrap/scss/transitions";
 // @import "node_modules/bootstrap/scss/dropdown";

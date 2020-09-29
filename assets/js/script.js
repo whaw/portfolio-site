@@ -2,14 +2,14 @@
 $(document).ready(function(){
 
   // MAIN NAV
-  // animate link scroll
+  // smooth scrolls
   $(".nav-link").click(function () {
     var id = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(id).offset().top
     }, 'slow');
   });
-  // resolve for padding in Introductions section body text throwing off scrollspy nav highlighting
+  // resolve for scrollspy nav highlighting miss
   $('body').scrollspy({
     offset: 50
   });

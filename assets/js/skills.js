@@ -5,7 +5,7 @@
     init: function(){
       this.addAnimElements();
       this.bindEvents();
-      this.render();
+      this.isShowing();
     },
     addAnimElements: function(){
       this.animElements.forEach(el => {
@@ -25,10 +25,20 @@
       });
     },
     isShowing: function(){
-      var scrollPos = window.scrollY;
+      var screenTop = $(window).scrollTop();
+      var elementTop = $(".js_skills__content").offset().top;
+      var screenBottom = screenTop + $(window).innerHeight();
+      var elementHeight = $(".js_skills__content").outerHeight();
+      var threeQuartersHeight = elementTop + (elementHeight * .75);
+      if ((screenBottom > threeQuartersHeight) && (screenTop < elementTop)){
+        this.render();
+        this.hasPlayed = true;
+      }
     },
     render: function(){
-     this.animate(this.$skills);
+      setTimeout(function(){
+        Skills.animate(Skills.$skills);
+      }, 500);
     },
     animate: function(arr){
       arr.forEach((el) => {
@@ -36,30 +46,10 @@
       });
     }
   }
-  
   $('document').ready(function(){
-    function check(){
-      if (Skills.hasPlayed == false){
-        var top_of_screen = $(window).scrollTop();
-        var top_of_element = $(".js_skills__content").offset().top;
-        var bottom_of_screen = top_of_screen + $(window).innerHeight();
-        var elementHeight = $(".js_skills__content").outerHeight();
-        var threeQuartersHeight = top_of_element + (elementHeight * .75);
-
-        if ((bottom_of_screen > threeQuartersHeight) && (top_of_screen < top_of_element)){
-            Skills.hasPlayed = true;
-            setTimeout(function(){
-              Skills.init();
-            }, 1500);
-        }
-      }
+    if (Skills.hasPlayed == false){
+      Skills.init();
     }
-    check();
-
-    $(window).scroll(function() {
-      check();
-    });
-
   });
 })()
 

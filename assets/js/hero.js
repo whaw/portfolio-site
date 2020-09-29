@@ -5,13 +5,13 @@ var Hero = {
     this.render();
   },
   addAnimElements: function(){
-    this.animElements.forEach(element => {
-      var objectProp = this.convertName(element);
-      Hero[objectProp] = $.makeArray($('.' + element));
+    this.animElements.forEach(el => {
+      var prop = this.convertName(el);
+      this.cacheDom(prop, el);
     });
   },
-  convertName: function(element){
-    return '$' + element.replace('js_', '');
+  convertName: function(el){
+    return '$' + el.replace('js_', '');
   },
   render: function(){
    this.animate(this.$hero);
@@ -21,6 +21,9 @@ var Hero = {
     Hero.animate(Hero.$pin, 'staggered');
    }, 4000);
    this.animate(this.$logo);
+  },
+  cacheDom: function(prop, el){
+    this[prop] = $.makeArray($('.' + el));
   },
   animate: function(arr, animType){
     arr.forEach((element, i) => {
@@ -34,7 +37,6 @@ var Hero = {
     });
   }
 }
-
 $('document').ready(function(){
   Hero.init();
 });

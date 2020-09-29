@@ -5,10 +5,10 @@
 @import "custom-helpers";
 
 // MODULES
+@import "modules/navbar";
 @import "modules/hero";
 @import "modules/skills";
 @import "modules/introductions";
 
 // COMPONENTS
 @import "components/pin";
-@import "components/swing";
