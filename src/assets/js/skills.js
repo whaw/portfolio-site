@@ -5,7 +5,7 @@
     init: function(){
       this.addAnimElements();
       this.bindEvents();
-      this.isShowing();
+      this.inViewport();
     },
     addAnimElements: function(){
       this.animElements.forEach(el => {
@@ -21,10 +21,10 @@
     },
     bindEvents: function(){
       window.addEventListener('scroll',(e) => {
-        this.isShowing()
+        this.inViewport()
       });
     },
-    isShowing: function(){
+    inViewport: function(){
       var screenTop = $(window).scrollTop();
       var elementTop = $(".js_skills__content").offset().top;
       var screenBottom = screenTop + $(window).innerHeight();
