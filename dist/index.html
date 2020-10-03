@@ -3,22 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Will H/ | Portfolio</title>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/all.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
-<body data-spy="scroll" data-target="#navbar" data-offset="0" id="home">
+<body data-spy="scroll" data-target="#navbar" data-offset="0" id="home" class="px-md-3">
   <nav id="navbar" class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
     <a class="navbar-brand js_logo" href="#">
-      Will H/ <small>Front End Developer<span class="d-none d-md-inline-block">, User Advocate, Outdoor Enthusiast</span></small>
+      <span class="logo mb-2 d-inline-block">Will H/</span><br>
+      Front End Developer<span class="d-none d-md-inline-block">, User Advocate, Outdoor Enthusiast</span>
     </a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-lg-end align-self-end" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-item nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
         <a class="nav-item nav-link" href="#skills">What I bring...</a>
@@ -31,8 +32,8 @@
     <div class="jumbotron hero position-relative js_hero">
       <div class="heading text-center position-absolute w-100">
         <h1>Aiming for <span class="text-white">Experiences</span></h1>
-        <h3 class="text-white">that delightful and make an impression<br>
-          <small>...while having some fun :)</small>
+        <h3 class="text-white">that delight and make an impression<br>
+          <small class="d-none d-sm-inline">...while having some fun :)</small>
         </h3>
       </div>
       <img src="assets/images/hero-left-frame.png" class="position-absolute hero__left-frame img-fluid js_frame" alt="">
@@ -67,10 +68,13 @@
         </div>
       </div>
       <div class="container js_skills__content">
-        <div class="row skills__content border bg-light p-5 position-relative js_skills text-center text-md-left">
-          <img src="assets/images/skills-rider.png" class="position-absolute skills__rider drop-shadow">
-          <img src="assets/images/skills-rider-color.png" class="skills__rider--color drop-shadow mb-5 mb-lg-0">
-          <img src="assets/images/skills-lines.png" class="position-absolute skills__lines">
+        <div class="row skills__content border position-relative bg-light p-5 text-center text-md-left js_skills">
+          <!--Add div to fix height auto breaking in Safari, from child being in flex container-->
+          <div class="text-center">
+            <img src="assets/images/skills-rider.png" class="position-absolute skills__rider drop-shadow">
+            <img src="assets/images/skills-rider-color.png" class="skills__rider--color drop-shadow mb-5 mb-lg-0">
+            <img src="assets/images/skills-lines.png" class="position-absolute skills__lines">
+          </div>
           <div class="col-12 col-sm-6 pb-5 pb-md-0 pt-3 pt-md-5 pt-lg-0 skills-col text-center text-sm-left">
             <h4 class="bullet">hard skills</h4>
             <ul class="list-unstyled">
@@ -85,8 +89,7 @@
               <li>Accurate to creative</li>
               <li>WordPress, Craft</li>
               <li>Git</li>
-              <li>A/B testing</li>
-              <li>Code reviewing</li>
+              <li>A/B tests</li>
               <li>and....</li>
             </ul>
             <div class="display-4"><small>working to be</small><br>
@@ -96,18 +99,17 @@
           <div class="col-12 col-sm-6 pt-3 pt-md-5 pt-lg-0 skills-col text-center text-sm-right">
             <h4 class="bullet">soft skills</h4>
             <ul class="list-unstyled">
+              <li>Critical thinking</li>
               <li>Problem solving</li>
-              <li>Critical Thinking</li>
-              <li>Resourceful/entrepenurial</li>
-              <li>Organization</li>
-              <li>Detail oriented</li>
-              <li>Takes ownership</li>
-              <li>Adaptable</li>
+              <li>Taking ownership</li>
+              <li>Adaptible</li>
               <li>Determined</li>
+              <li>Organized</li>
+              <li>Detail oriented</li>
               <li>Dependable</li>
-              <li>Team values</li>
-              <li>Ready to help</li>
-              <li>Empathy</li>
+              <li>Flexible</li>
+              <li>Supportive</li>
+              <li>Empathetic</li>
               <li>Sense of humor</li>
               <li>and....</li>
             </ul>
@@ -132,9 +134,9 @@
           <div class="col-3 col-sm-2 col-xl-1 p-4 p-md-5 p-xl-3">
             <img src="assets/images/companies/knorr.svg" loading="lazy" class="w-100">
           </div>
-          <div class="col-3 col-sm-2 col-xl-1 p-4 p-md-5 p-xl-3">
+          <!-- <div class="col-3 col-sm-2 col-xl-1 p-4 p-md-5 p-xl-3">
             <img src="assets/images/companies/apple.svg" loading="lazy" class="w-100 p-2 p-sm-3">
-          </div>
+          </div> -->
           <div class="col-3 col-sm-2 col-xl-1 p-4 p-md-5 p-xl-3">
             <img src="assets/images/companies/canadaPost.svg" loading="lazy" class="w-100 p-1">
           </div>
@@ -191,13 +193,13 @@
               <h3>William has a wide view on the web development process.</h3>
               <p>As a young lad he left Vancouver, with a Diploma in Advanced Web Content Development in hand, for the bright lights of Toronto. There he built on his understanding of how things work with courses in .NET applications development (but that was a long time ago), 17 years of industry experience as a front end developer, and rounding things out with project coordinating, quality assurance and frontline client support.
               </p>
-              <p>William thinks in objects, reusable compoents and systems, for scalability, speed of development and maintainability, with the goal to exceed expectations and to reach that point where users feel delighted in the effortless experience.</p>
+              <p>He thinks in objects, reusable components and systems, for scalability, speed of deployment and maintainability, and at the center, a focus on the customer, to surpass expectations and delight in the effortless experience.</p>
               <p>Driven to produce better web content for all, he has helped companies such as Anderson DDB, Transcontinental, Marsh STARS and many more meet their web objectives, while earning the appreciation of happy clients and a few awards along the way.</p>
-              <p>And while he's not living in digital space, he can be found in the great outdoors. He loves the outdoors. Like, loves loves the outdoors, and MEC.</p>
+              <p>And when he's not living in digital space, he can be found in the great outdoors. He loves the outdoors. Like, loves loves the outdoors, and MEC.</p>
               <p class="pt-5">
                 <button type="button" class="btn btn-primary" href="#" role="button">CV</button>
                 <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="To see what's under the hood of this site">Github</button>
-                <span class="align-bottom pl-3">1 (416) 627-7141 (Toronto, Canada), hello(at)aworkingcopy.com</span>
+                <span class="align-bottom pl-md-3 pt-3 pt-md-0 d-block d-sm-inline">1 (416) 627-7141, <a href="mailto:william.haw@gmail.com">william.haw@gmail.com</a></span>
               </p>
             </div>
           </div>
@@ -206,7 +208,7 @@
     </section>
   </main>
   <footer class="border-top pt-2 pb-5 pl-3 text-secondary small">
-    Copyright &copy; 2020 William Haw - All rights reserved
+    Copyright &copy; 2020 - All rights reserved
   </footer>
 </body>
 </html>

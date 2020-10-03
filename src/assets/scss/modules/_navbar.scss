@@ -1,18 +1,10 @@
 .navbar-brand {
-  font-size: 1.7rem;
-  font-weight: 600;
-  @include media-breakpoint-up(md){
-    font-size: 2rem;
-  }
-  small {
-    font-size: 50%;
-    @include media-breakpoint-up(md){
-      font-size: 35%;
-    }
-    @include media-breakpoint-up(lg){
-      font-size: 40%;
-    }
-
+  font-size: .9rem;
+  .logo {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1rem;
+    display: inline-block;
   }
   &.animate {
     perspective: 100px;

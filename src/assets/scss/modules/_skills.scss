@@ -14,7 +14,7 @@
       padding-bottom: 100px;
     }
   }
-  &-col:nth-of-type(2) {
+  &-col:nth-of-type(3) {
     border-top: $border-width solid $border-color;
     @include media-breakpoint-up(sm){
       border-left: $border-width solid $border-color;

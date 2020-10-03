@@ -44,8 +44,7 @@ function watchTask(){
       baseDir: './dist/'
     }
   });
-
-  watch(['./src/assets/scss/**/*.scss', './src/assets/js/**/*.js'], {interval: 1000}, parallel(cssTask, jsTask, browserSync.reload));
+  watch(['./src/assets/scss/**/*.scss', './src/assets/js/**/*.js'], {interval: 1000}, parallel(cssTask, jsTask));
 }
 
 exports.copyHtml = copyHtml;
