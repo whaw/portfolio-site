@@ -1,6 +1,21 @@
 
-$(document).ready(function(){
+$(function(){
+  $('.progressive-image').each(function(){
+    var image = new Image();
+    var previewImage = $(this).find('.loadingImage');
+    var newImage = $(this).find('.overlay');
+    image.onload = function(){
+      newImage.css('background-image', 'url(' + image.src + ')');
+      newImage.css('opacity', '1');
+      if (this.complete){
+        previewImage.addClass('isLoaded');
+      }
+    };
+    image.src = previewImage.data('image');
+  });
+});
 
+$(document).ready(function(){
   // MAIN NAV
   // smooth scrolls
   $(".nav-link").click(function () {
@@ -14,3 +29,4 @@ $(document).ready(function(){
     offset: 50
   });
 });
+

@@ -3,17 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>William H/ | Portfolio - TEST</title>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <meta name="robots" content="noindex">
+  <title>William H/ | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script src="assets/js/all.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="0" id="home" class="px-md-3">
   <nav id="navbar" class="navbar navbar-expand-lg sticky-top navbar-light bg-white">
     <a class="navbar-brand js_logo" href="#">
-      <span class="logo mb-2 d-inline-block">William H/</span><br>
+      <span class="logo mb-2 d-inline-block">Will H/</span><br>
       Front End Developer<span class="d-none d-md-inline-block">, User Advocate, Outdoor Enthusiast</span>
     </a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +37,13 @@
       <img src="assets/images/hero-left-frame.png" class="position-absolute hero__left-frame img-fluid js_frame" alt="">
       <img src="assets/images/hero-right-frame.png" class="position-absolute hero__right-frame img-fluid js_frame" alt="">
       <img src="assets/images/hero-rider.png" class="position-absolute hero__rider img-fluid js_rider" alt="">
-      <img src="assets/images/hero-mountains2.png" class="hero__background img-fluid" alt="">
+      <div class="progressive-image">
+        <div class="loadingImage"
+           style="background-image: url('assets/images/hero-mountains2.png')"
+           data-image="assets/images/hero-mountains2.png">
+        </div>
+        <div class="overlay"></div>
+      </div>
       <div class="pin text-white pin-1 position-absolute js_pin">
         <div class="pin__text position-absolute d-inline text-nowrap">
           <small>Solving Problems</small>
@@ -134,9 +138,9 @@
           <div class="col-3 col-sm-2 col-xl-1 p-4 p-md-5 p-xl-3">
             <img src="assets/images/companies/knorr.svg" loading="lazy" class="w-100" alt="Knorr">
           </div>
-          <!-- <div class="col-3 col-sm-2 col-xl-1 p-4 p-md-5 p-xl-3">
+          <div class="col-3 col-sm-2 col-xl-1 p-4 p-md-5 p-xl-3">
             <img src="assets/images/companies/apple.svg" loading="lazy" class="w-100 p-2 p-sm-3" alt="Apple">
-          </div> -->
+          </div>
           <div class="col-3 col-sm-2 col-xl-1 p-4 p-md-5 p-xl-3">
             <img src="assets/images/companies/canadaPost.svg" loading="lazy" class="w-100 p-1" alt="Canada Post">
           </div>
@@ -183,23 +187,22 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-4 text-center">
-              <img src="assets/images/me.png" class="img-fluid drop-shadow introductions__me" loading="lazy" alt="">
-              <img src="assets/images/dog.png" class="position-absolute introductions__dog" loading="lazy" alt="">
-              <img src="assets/images/speechbubble.png" class="position-absolute introductions__speech-bubble" loading="lazy">
+              <img src="assets/images/me.png" class="img-fluid drop-shadow introductions__me" loading="lazy" alt="author">
+              <img src="assets/images/dog.png" class="position-absolute introductions__dog" loading="lazy" alt="dog">
+              <img src="assets/images/speechbubble.png" class="position-absolute introductions__speech-bubble" loading="lazy" alt="speech bubble">
               <p class="pt-4 mr-10 mr-sm-0 pl-sm-7 pl-md-15 pl-lg-0 text-left">
                 <small>Just because dogs are awesome :)...Holla ...</small>
               </p>
             </div>
             <div class="col-12 col-lg-8 py-7 py-md-5 pl-md-7">
               <h3>William has a wide view on the web development process.</h3>
-              <p>As a young lad he left Vancouver, with a Diploma in Advanced Web Content Development in hand, for the bright lights of Toronto. There he built on his understanding of how things work with courses in .NET applications development (but that was a long time ago), 17 years of industry experience as a front end developer, and rounding things out with project coordinating, quality assurance and frontline client support.
-              </p>
-              <p>He thinks in objects, reusable components and systems, for scalability, speed of deployment and maintainability, to better meet the needs of the customer, to surpass expectations and to delight in an effortless experience or to make an impression in a meaningful way.</p>
-              <p>Driven to produce better web content for all, he has helped companies such as Anderson DDB, Transcontinental, Marsh STARS and many more meet their web objectives, while earning the appreciation of happy clients and a few awards along the way.</p>
-              <p>And when he's not living in digital space, he can be found in the great outdoors. He loves the outdoors. Like, loves loves the outdoors, and MEC.</p>
+              <p>As a young lad he left Vancouver, with a Diploma in Advanced Web Content Development in hand, for the bright lights of Toronto. There he built on his understanding of how things work with courses in .NET applications development (but that was a long time ago), 17 years of industry experience as a front end developer, and rounding things out with project coordinating, quality assurance and frontline client support.</p>
+              <p>He thinks in objects, reusable components and systems, for scalability, speed of deployment and maintainability, with the central goal of better meeting the needs of the customer, to surpass expectations and to delight and make an impression where possible in a meaningful way.</p>
+              <p>Driven to produce better web content for all, he has helped companies such as Anderson DDB, Transcontinental, Marsh STARS and many more meet their web objectives, while earning the appreciation of happy clients and a few awards along the way.</p>
+              <p>And when he's not living in digital space, he can be found in the great outdoors. He loves the outdoors. Like, loves loves the outdoors, and MEC.</p>
               <p class="pt-5">
-                <a href="#" class="btn btn-primary" role="button">CV</a>
-                <a href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="To see what's under the hood of this site" role="button">Github</a>
+                <a href="https://bit.ly/33uSwgm" class="btn btn-primary" role="button" target="_blank">CV</a>
+                <a href="#" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="To see what's under the hood of this site" role="button" target="_blank">Github</a>
                 <span class="align-bottom pl-md-3 pt-3 pt-md-0 d-block d-sm-inline">1 (416) 627-7141, <a href="mailto:william.haw@gmail.com">william.haw@gmail.com</a></span>
               </p>
             </div>
@@ -211,5 +214,8 @@
   <footer class="border-top pt-2 pb-5 pl-3 text-secondary small">
     Copyright &copy; 2020 - All rights reserved
   </footer>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="assets/js/all.js"></script>
 </body>
 </html>

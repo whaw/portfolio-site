@@ -1,0 +1,23 @@
+.progressive-image {
+	position: relative;
+	overflow: hidden;
+  div {
+    width: 100%;
+    padding-top: 45%;
+    background-size: cover !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat;
+  }
+  .loadingImage {
+    background-repeat: no-repeat;
+    &:not(.isLoaded) {
+      filter: blur(5px);
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+  }
+}
