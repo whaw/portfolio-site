@@ -1,8 +1,15 @@
+$body-max-width: 1600px;
 html,
 body {
-  max-width: 1600px;
+  max-width: $body-max-width;
   height: 100%;
   margin: 0 auto;
+}
+// position 'fixed-top' navbar in body
+.navbar {
+  &__container {
+    max-width: $body-max-width;
+  }
 }
 // adjust for nav link targeting
 section {
