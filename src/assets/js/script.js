@@ -1,4 +1,3 @@
-
 $(function(){
   $('.progressive-image').each(function(){
     var image = new Image();
@@ -18,7 +17,7 @@ $(function(){
 $(document).ready(function(){
   // MAIN NAV
   // smooth scrolls
-  $(".nav-link").click(function () {
+  $(".nav-link").on('click', function () {
     var id = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(id).offset().top
