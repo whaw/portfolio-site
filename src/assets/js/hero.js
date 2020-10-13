@@ -1,11 +1,8 @@
 class HeroAnim extends Anim {
   constructor(){
     super();
-    this.animElements = ['js_frame', 'js_rider', 'js_pin', 'js_logo', 'js_hero']
-  }
-  init(){
-    this.addAnimElements();
-    this.render();
+    this.animElements = ['js_frame', 'js_rider', 'js_pin', 'js_logo', 'js_hero'];
+    this.animContainer = '.js_hero';
   }
   render(){
     this.animate(this.$hero);
@@ -19,5 +16,7 @@ class HeroAnim extends Anim {
 }
 $('document').ready(function(){
   const heroAnim = new HeroAnim;
-  heroAnim.init();
+  if (heroAnim.hasPlayed == false){
+    heroAnim.init();
+  }
 });

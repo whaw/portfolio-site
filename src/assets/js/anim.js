@@ -1,9 +1,13 @@
 class Anim {
   constructor(){
     this.hasPlayed = false;
+    this.animElements = {};
+    this.animContainer = String;
   }
-  cacheDom(prop, el){
-    this[prop] = $.makeArray($('.' + el));
+  init(){
+    this.addAnimElements();
+    this.bindEvents();
+    this.inViewport(this.animContainer);
   }
   addAnimElements(){
     this.animElements.forEach(el => {
@@ -13,6 +17,12 @@ class Anim {
   }
   convertName(el){
     return '$' + el.replace('js_', '');
+  }
+  cacheDom(prop, el){
+    this[prop] = $.makeArray($('.' + el));
+  }
+  bindEvents(){
+    window.addEventListener('scroll',(e) => this.inViewport(this.animContainer) );
   }
   inViewport(el){
     var screenTop = $(window).scrollTop();
@@ -24,6 +34,9 @@ class Anim {
       this.render();
       this.hasPlayed = true;
     }
+  }
+  render(){
+    // handle in child classes
   }
   animate(arr, animType = 'none'){
     arr.forEach((el, i) => {
