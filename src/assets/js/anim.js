@@ -25,7 +25,7 @@ class Anim {
       this.hasPlayed = true;
     }
   }
-  animate(arr, animType){
+  animate(arr, animType = 'none'){
     arr.forEach((el, i) => {
       if (animType == 'staggered'){
         setTimeout(function(){

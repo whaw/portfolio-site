@@ -1,4 +1,4 @@
-class Skills extends Anim {
+class SkillsAnim extends Anim {
   constructor(){
     super();
     this.animElements = ['js_skills'];
@@ -15,15 +15,14 @@ class Skills extends Anim {
     });
   }
   render(){
-    const self = this;
-    setTimeout(function(){
-      self.animate(self.$skills);
+    setTimeout( () => {
+      this.animate(this.$skills);
     }, 500);
   }
 }
 $('document').ready(function(){
-  let skills = new Skills;
-  if (skills.hasPlayed == false){
-    skills.init();
+  const skillsAnim = new SkillsAnim;
+  if (skillsAnim.hasPlayed == false){
+    skillsAnim.init();
   }
 });

@@ -1,4 +1,4 @@
-class Hero extends Anim {
+class HeroAnim extends Anim {
   constructor(){
     super();
     this.animElements = ['js_frame', 'js_rider', 'js_pin', 'js_logo', 'js_hero']
@@ -11,16 +11,13 @@ class Hero extends Anim {
     this.animate(this.$hero);
     this.animate(this.$frame);
     this.animate(this.$rider);
-    var self = this;
-    setTimeout(function(){
-      self.animate(self.$pin, 'staggered');
+    setTimeout( () => {
+      this.animate(this.$pin, 'staggered');
     }, 4000);
-  this.animate(this.$logo);
+    this.animate(this.$logo);
   }
 }
 $('document').ready(function(){
-  let hero = new Hero;
-  hero.init();
+  const heroAnim = new HeroAnim;
+  heroAnim.init();
 });
-  
-

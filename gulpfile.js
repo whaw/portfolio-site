@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
+const babel = require('gulp-babel');
 const terser = require('gulp-terser'); // use for es6 (instead of gulp-uglify)
 const sourcemaps = require('gulp-sourcemaps');
 const postcss = require('gulp-postcss');
@@ -22,6 +23,9 @@ function imgTask(){
 function jsTask(){
   return src('./src/assets/js/**/*.js')
   .pipe(sourcemaps.init())
+  .pipe(babel({
+    presets: ['@babel/env']
+  }))
   .pipe(concat('all.js'))
   .pipe(terser())
   .pipe(sourcemaps.write('.'))
