@@ -35,9 +35,9 @@ class Anim {
       this.hasPlayed = true;
     }
   }
-  render(){
-    // handle in child classes
-  }
+  /* render(){
+    handle animation timing in child classes
+  }*/
   animate(arr, animType = 'none'){
     arr.forEach((el, i) => {
       if (animType == 'staggered'){

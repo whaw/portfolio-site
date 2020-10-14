@@ -15,15 +15,15 @@ $(function(){
 });
 
 $(document).ready(function(){
-  // MAIN NAV
-  // smooth scrolls
-  $(".nav-link").on('click', function () {
+  // add smooth scroll
+  $('a').on('click', function() {
     var id = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(id).offset().top
     }, 'slow');
   });
-  // resolve for scrollspy nav highlighting miss
+
+  // adjust scrollspy nav highlighting
   $('body').scrollspy({
     offset: 50
   });
