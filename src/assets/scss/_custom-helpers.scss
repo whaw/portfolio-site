@@ -8,6 +8,10 @@
   }
 }
 
+.navbar {
+  padding-bottom: 0;
+}
+
 // IMAGES
 .drop-shadow {
   filter: drop-shadow(-11px 20px 4px #aaa);
@@ -16,10 +20,7 @@
   filter: grayscale(1);
 }
 
-.cv {
-  max-width: 840px;
-  width: 100%;
-  height: 90%;
-  margin: 0 auto;
-  border: 0;
+// BUTTONS
+P > a.btn.btn-primary {
+  margin-top: 1rem;
 }
