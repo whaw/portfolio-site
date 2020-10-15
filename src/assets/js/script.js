@@ -14,18 +14,27 @@ $(function(){
   });
 });
 
+function updateScrollSpy() {
+  $('[data-spy="scroll"]').each( () => {
+    var $spy = $(this).scrollspy('refresh')
+  });
+}
+
 $(document).ready(function(){
+  // reset scrollspy on page load/refresh
+  setTimeout(updateScrollSpy, 1000);
+
+  // adjust scrollspy nav highlighting
+  $('body').scrollspy({
+    offset: 50
+  });
+
   // add smooth scroll
   $('a').on('click', function() {
     var id = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(id).offset().top
     }, 'slow');
-  });
-
-  // adjust scrollspy nav highlighting
-  $('body').scrollspy({
-    offset: 50
   });
 });
 
