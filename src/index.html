@@ -11,9 +11,9 @@
 <body data-spy="scroll" data-target="#navbar" data-offset="0" id="home" class="px-md-3 pt-11">
   <header>
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light bg-white">
-      <div class="container navbar__container pt-lg-2">
+      <div class="container navbar__container py-2">
         <a class="navbar-brand js_logo" href="#home">
-          <span class="logo mb-2 d-inline-block">Will H/</span><br>
+          <span class="logo mb-2 d-inline-block">Will H/</span><br class="d-none d-lg-block">
           Front End Developer<span class="d-none d-md-inline-block">, User Advocate, Outdoor Enthusiast</span>
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,6 +26,8 @@
             <a class="nav-item nav-link" href="#clients">Some Clients</a>
             <a class="nav-item nav-link" href="#about-this-site">About this site</a>
             <a class="nav-item nav-link" href="#introductions">Introductions</a>
+            <a class="nav-item nav-link" href="assets/downloads/William-Haw-CV.pdf" target="_blank">CV</a>
+            <a class="nav-item nav-link" href="#contact">Contact</a>
           </div>
         </div>
       </div>
@@ -35,6 +37,10 @@
         <h1>Building for <span class="text-white">experiences</span></h1>
         <h2 class="text-white">that aim to delight and leave an impression<br>
         </h2>
+        <div class="pt-3 d-none d-sm-block">
+          <a href="#skills" class="btn btn-secondary" role="button">Tell me more</a>
+          <a href="assets/downloads/William-Haw-CV.pdf" class="btn btn-secondary" role="button" target="_blank">Straight to the Goods (CV)</a>
+        </div>
       </div>
       <img src="assets/images/hero-left-frame.png" class="position-absolute hero__left-frame img-fluid js_frame" alt="">
       <img src="assets/images/hero-right-frame.png" class="position-absolute hero__right-frame img-fluid js_frame" alt="">
@@ -189,7 +195,7 @@
         <div class="row">
           <div class="col-12 col-md-6">
             <h4>Purpose</h4>
-            <p>To demonstrate a level of professionalism, polish and experience, with an eye and appreciation for design and focus on user experience. Moreover, to provide insight into interests and personality to fit with culture, values and team for the best possible outcome.</p>
+            <p>To demonstrate a level of professionalism, polish and experience, with an eye and appreciation for design and focus on user experience. Moreover, to provide insight into interests and personality, to match with culture, values and team.</p>
             <h4>Build stack</h4>
             <ul>
               <li>SCSS</li>
@@ -206,7 +212,7 @@
             <h4>Approach</h4>
             <p>Everything is broken down into modules and reusable parts. JavaScript is written with objects in mind and deployment versions are built from automated tasks, that compile, convert and optimize assets.</p>
             <p>Hero image is loaded progressively. Image qualities did not permit for 2x versions. Code validates against W3C standards and tests consistently across browsers and devices.</p>
-            <p><a href="https://github.com/whaw/whaw.github.io" class="btn btn-primary" role="button" target="_blank">Checkout the code</a></p>
+            <p><a href="https://github.com/whaw/whaw.github.io" class="btn btn-primary" role="button" target="_blank">To the code (Github)</a> <a href="#contact" class="btn btn-primary" role="button">Let's talk</a></p>
           </div>
         </div>
       </div>
@@ -216,7 +222,7 @@
         <div class="row">
           <div class="col text-center">
             <h2>Introductions</h2>
-            <h3 class="text-secondary">Give me a shout. Always up for a chat!</h3>
+            <h3 class="text-secondary">Focused on people and experiences</h3>
           </div>
         </div>
       </div>
@@ -224,7 +230,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-4 text-center px-5">
-              <img src="assets/images/me.png" class="img-fluid drop-shadow introductions__me" loading="lazy" alt="author">
+              <img src="assets/images/me2.png" class="img-fluid drop-shadow introductions__me" loading="lazy" alt="author">
               <img src="assets/images/dog.png" class="position-absolute introductions__dog" loading="lazy" alt="dog">
               <!-- <img src="assets/images/speechbubble.png" class="position-absolute introductions__speech-bubble" loading="lazy" alt="speech bubble"> -->
               <p class="pt-4 mr-10 mr-sm-0 pl-sm-7 pl-md-15 pl-lg-0 text-left">
@@ -241,6 +247,21 @@
               </p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="pb-8">
+      <div class="container section__header">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Contact</h2>
+            <h3 class="text-secondary">Always happy to chat. Give me a shout.</h3>
+            <img src="assets/images/contact.gif" usemap="#contact-map" class="mt-5" alt="contact info">
+            <map name="contact-map">
+              <area shape="rect" coords="34,28,139,34" alt="" href="tel:+1-416-627-7141">
+              <area shape="rect" coords="1,47,164,58" alt="" href="mailto:william.haw@gmail.com">
+            </map>
+          </div>  
         </div>
       </div>
     </section>
