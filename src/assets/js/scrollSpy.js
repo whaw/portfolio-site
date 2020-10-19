@@ -12,4 +12,5 @@ $(document).ready(function(){
   $('body').scrollspy({
     offset: 50
   });
-}
+});
+
