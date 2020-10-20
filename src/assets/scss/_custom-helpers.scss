@@ -24,3 +24,14 @@
 P > a.btn.btn-primary {
   margin-top: 1rem;
 }
+
+.top-btn {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+  &.show {
+    opacity: 1;
+  }
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}

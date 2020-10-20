@@ -25,11 +25,11 @@ class Anim {
     window.addEventListener('scroll',(e) => this.inViewport(this.animContainer) );
   }
   inViewport(el){
-    var screenTop = $(window).scrollTop();
-    var elementTop = $(el).offset().top;
-    var screenBottom = screenTop + $(window).innerHeight();
-    var elementHeight = $(el).outerHeight();
-    var threeQuartersHeight = elementTop + (elementHeight * .75);
+    let screenTop = $(window).scrollTop();
+    let elementTop = $(el).offset().top;
+    let screenBottom = screenTop + $(window).innerHeight();
+    let elementHeight = $(el).outerHeight();
+    let threeQuartersHeight = elementTop + (elementHeight * .75);
     if ((screenBottom > threeQuartersHeight) && (screenTop < elementTop)){
       this.render();
       this.hasPlayed = true;
