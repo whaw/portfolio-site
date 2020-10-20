@@ -4,7 +4,7 @@ let anim = {
   animContainer: '',
   create: function(values){
     var instance = Object.create(this);
-    Object.keys(values).forEach(function(key){
+    Object.keys(values).forEach(key => {
       instance[key] = values[key];
     });
     return instance;
