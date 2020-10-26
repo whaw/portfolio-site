@@ -2,20 +2,15 @@
   opacity: 0;
   // pin dot
   &:before {
-    opacity: .8;
-    background-color: #fff;
     content: "";
+    background-color: #fff;
     display: inline-block;
-    border-width: 4px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    border-color: rgba(255, 255, 255, .5);
-    -webkit-background-clip: padding-box; /* for Safari */
-    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    border: 2px solid #ccc;
     border-radius: 50%;
     height: 8px;
     width: 8px;
     margin-right: 20px;
+    top: 50%;
   }
   // pin line
   &:after {
@@ -31,5 +26,6 @@
   }
   &__text {
     line-height: 1.5rem;
+    font-size: .9rem;
   }
 }

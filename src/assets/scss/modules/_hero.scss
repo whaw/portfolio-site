@@ -19,7 +19,7 @@
         font-size: 6vw;
       }
       @include media-breakpoint-up(xl){
-        font-size: 4.75rem;
+        font-size: 5.5rem;
       }
     }
     h2 {
@@ -40,7 +40,7 @@
     z-index: 2;
   }
   &__left-frame { 
-    width: 12%;
+    width: 11%;
     bottom: 10.5%;
     left: -100%;
     &.animate {
@@ -49,7 +49,7 @@
     }
   }
   &__right-frame{
-    width: 19%;
+    width: 17%;
     right: -100%;
     bottom: 12%;
     &.animate {
@@ -58,8 +58,8 @@
     }
   }
   &__rider {
-    width: 22%;
-    right: 25%;
+    width: 17%;
+    left: 25%;
     z-index: 3;
     bottom: -100%;
     &.animate {
@@ -71,15 +71,15 @@
 .pin {
   z-index: 4;
   &-3 {
-    left: 56.8%;
+    left: 40%;
     top: 1.2%;
   }
   &-2 {
-    left: 62%;
+    left: 35%;
     top: 5.5%;
   }
   &-1 {
-    left: 63.5%;
+    left: 30%;
     top: 12%;
   }
   &.animate {
