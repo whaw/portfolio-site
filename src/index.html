@@ -207,10 +207,12 @@
               <li>SCSS</li>
               <li>HTML/Bootstrap</li>
               <li>JavaScript</li>
+              <li>React*</li>
               <li>NPM</li>
               <li>Gulp</li>
-              <li>Babel</li> 
+              <li>Babel</li>
             </ul>
+            <div class="small text-secondary">*For the icanhazdadjoke.com API call at the bottom of the page.</div>
           </div>
           <div class="col-12 col-md-6">
             <h4>Why Bootstrap?</h4>
@@ -250,21 +252,26 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="pb-15">
+    <section id="contact" class="py-5">
       <div class="container section__header">
         <div class="row">
           <div class="col text-center">
             <h2>Contact</h2>
             <h3 class="text-secondary">Give me a shout. Always happy to chat.</h3>
+
             <img src="assets/images/contact.gif" usemap="#contact-map" class="mt-5" alt="contact info">
-            <map name="contact-map">
+            <map name="contact-map" class="d-block">
               <area shape="rect" coords="34,28,139,34" alt="" href="tel:+1-416-627-7141">
               <area shape="rect" coords="1,47,164,58" alt="" href="mailto:william.haw@gmail.com">
             </map>
-          </div>  
+          </div>
         </div>
       </div>
     </section>
+    <div class="joke-container pt-5 text-center">
+      <div class="display-5 pb-2">Dad joke?</div>
+      <div id="js_joke" class="container text-center pb-4"></div>
+    </div>
     <a href="#home" class="btn btn-secondary top-btn">Top</a>
   </main>
   <footer class="border-top pt-2 pb-5 pl-3 text-secondary small">
@@ -273,5 +280,11 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script src="assets/js/all.js"></script>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="Joke.js"></script
 </body>
 </html>

@@ -41,9 +41,15 @@ h4 {
   &-4 {
     color: $headings-color;
   }
-}
-@include media-breakpoint-down(sm) {
-  .display-4 {
-    font-size: 2rem;
+  &-4 {
+    @include media-breakpoint-down(sm) {
+      font-size: 2rem;
+    }
+  }
+  &-5 {
+    font-size: 2.5rem;
+    @include media-breakpoint-down(sm) {
+      font-size: 1.5rem;
+    }
   }
 }
