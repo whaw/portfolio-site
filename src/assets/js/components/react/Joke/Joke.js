@@ -1,4 +1,4 @@
-'use strict';
+import React from 'react';
 const e = React.createElement;
 
 class Joke extends React.Component {
@@ -58,5 +58,4 @@ class Joke extends React.Component {
   }
 }
 
-const domContainer = document.querySelector('#js_joke');
-ReactDOM.render(e(Joke), domContainer);
+export default Joke;
