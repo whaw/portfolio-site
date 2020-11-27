@@ -2,9 +2,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/assets/js/components/react/index.js',
+  entry: './src/index.js',
   output: {
-    filename: 'assets/js/react.js'
+    filename: 'assets/js/bundle.js'
   },
   module: {
     rules: [

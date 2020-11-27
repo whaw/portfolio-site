@@ -1,0 +1,1 @@
+(()=>{var o={$topButton:$(".top-btn"),$hero:$("header"),showButton:function(){$(window).scrollTop()>this.$hero.outerHeight()?this.render(!0):this.render(!1)},render:function(o){o?this.$topButton.addClass("show"):this.$topButton.removeClass("show")}};$(document).ready((function(){o.showButton(),$(window).on("scroll",(function(){o.showButton()}))}))})();

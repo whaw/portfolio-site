@@ -1,0 +1,1 @@
+$(document).ready((function(){$("a").on("click",(function(){var o=$(this).attr("href");$("html, body").animate({scrollTop:$(o).offset().top},"slow")}))}));

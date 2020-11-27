@@ -1,0 +1,1 @@
+(()=>{var n=anim.create({animElements:["js_skills"],animContainer:".js_skills__content",render:function(){var n=this;setTimeout((function(){n.animate(n.$skills)}),500)}});$("document").ready((function(){n.init()}))})();
