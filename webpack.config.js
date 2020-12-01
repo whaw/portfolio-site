@@ -6,6 +6,12 @@ module.exports = {
   output: {
     filename: 'assets/js/bundle.js'
   },
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 200,
+    ignored: 'node_modules/**',
+    poll: 1000
+  },
   module: {
     rules: [
       {

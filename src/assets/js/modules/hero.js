@@ -1,4 +1,6 @@
-const heroAnim = anim.create({
+import Anim from '/src/assets/js/modules/anim';
+
+const HeroAnim = Anim.create({
   animElements: ['js_frame', 'js_rider', 'js_pin', 'js_logo', 'js_hero'],
   animContainer: '.js_hero',
   render: function(){
@@ -13,5 +15,5 @@ const heroAnim = anim.create({
 });
 
 $('document').ready(function(){
-  heroAnim.init();
+  HeroAnim.init();
 });

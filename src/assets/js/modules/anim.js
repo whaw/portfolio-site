@@ -1,4 +1,4 @@
-let anim = {
+const Anim = {
   hasPlayed: false,
   animElements: [],
   animContainer: '',
@@ -57,3 +57,5 @@ let anim = {
     });
   }
 }
+
+export default Anim;
