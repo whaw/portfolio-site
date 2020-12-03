@@ -7,3 +7,5 @@ import '/src/assets/js/modules/hero';
 import '/src/assets/js/modules/skills';
 import '/src/assets/js/vendor/scrollSpy';
 import '/src/assets/js/scripts';
+
+import '/src/assets/scss/styles.scss';

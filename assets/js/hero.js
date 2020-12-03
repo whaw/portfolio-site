@@ -1,1 +1,0 @@
-(()=>{var i=anim.create({animElements:["js_frame","js_rider","js_pin","js_logo","js_hero"],animContainer:".js_hero",render:function(){var i=this;this.animate(this.$hero),this.animate(this.$frame),this.animate(this.$rider),setTimeout((function(){i.animate(i.$pin,"staggered")}),4e3),this.animate(this.$logo)}});$("document").ready((function(){i.init()}))})();

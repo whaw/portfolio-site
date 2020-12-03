@@ -1,15 +1,15 @@
 // INIT
-@import "vendors/bootstrap";
-@import "grid";
-@import "type";
-@import "custom-helpers";
+@import "/src/assets/scss/vendors/bootstrap";
+@import "/src/assets/scss/grid";
+@import "/src/assets/scss/type";
+@import "/src/assets/scss/custom-helpers";
 
 // MODULES
-@import "modules/navbar";
-@import "modules/hero";
-@import "modules/skills";
-@import "modules/introductions";
+@import "/src/assets/scss/modules/navbar";
+@import "/src/assets/scss/modules/hero";
+@import "/src/assets/scss/modules/skills";
+@import "/src/assets/scss/modules/introductions";
 
 // COMPONENTS
-@import "components/pin";
-@import "components/progressive-image"
+@import "/src/assets/scss/components/pin";
+@import "/src/assets/scss/components/progressive-image"

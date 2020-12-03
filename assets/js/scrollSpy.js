@@ -1,1 +1,0 @@
-(()=>{function o(){var o=this;$('[data-spy="scroll"]').each((function(){$(o).scrollspy("refresh")}))}$(document).ready((function(){setTimeout(o,1e3),$("body").scrollspy({offset:50})}))})();
