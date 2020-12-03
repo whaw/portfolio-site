@@ -2,6 +2,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: '/src/index.js',
@@ -71,21 +72,12 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        loader: 'html-loader',
-        options: {
-          attributes: {
-            list: [
-              // All default supported tags and attributes
-              '...',
-            ]
-            // todo
-            // mountain image not showing
-            // overwrite images
-            // add cash busting to js and css
-            // add watch and hot reload
-          }
-        }
+        loader: 'html-loader'
       }
+      // todo
+      // add inline mountain image to dist
+      // add caching and cach busting to images, css and js
+      // add watch,
     ]
   },
   plugins: [
@@ -95,7 +87,8 @@ module.exports = {
       patterns: [
         { from: 'src/assets/downloads', to: 'assets/downloads'},
       ]
-    }) 
+    }),
+    new CleanWebpackPlugin() 
   ],
   devServer: {
     // 404s fallback to root file

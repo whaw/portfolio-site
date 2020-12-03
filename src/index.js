@@ -8,4 +8,5 @@ import '/src/assets/js/modules/skills';
 import '/src/assets/js/vendor/scrollSpy';
 import '/src/assets/js/scripts';
 
+/* styles */
 import '/src/assets/scss/styles.scss';
