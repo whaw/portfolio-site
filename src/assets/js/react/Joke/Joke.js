@@ -21,9 +21,9 @@ class Joke extends React.Component {
     )
     .then(result => {
       if (result.ok) {
-        console.log('ok');
+        console.log('joke ok');
       } else {
-        console.log('failed')
+        console.log('joke failed')
       }
       return result.json();
     })
