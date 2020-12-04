@@ -16,8 +16,19 @@ const config = {
   devServer: {
     port: 3000,
     contentBase: DIR_PATH,
+    historyApiFallback: true,
   },
   mode: 'development',
+  plugins: [
+    new MiniCssExtractPlugin({filename: 'assets/css/main.[hash].css'}),
+    new HtmlWebpackPlugin({template: "src/index.html"}),
+    new CopyPlugin({
+      patterns: [
+        { from: 'src/assets/downloads', to: 'assets/downloads'},
+      ]
+    }),
+    new CleanWebpackPlugin(),
+  ],
   module: {
     rules: [
       {
@@ -82,27 +93,8 @@ const config = {
         test: /\.html$/i,
         loader: 'html-loader'
       }
-      // todo
-      // add dev prod versions
-      // add watch and hot reload
-      // start dev deletes dist contents
-      // css map
     ]
   },
-  plugins: [
-    new MiniCssExtractPlugin({filename: 'assets/css/main.[hash].css'}),
-    new HtmlWebpackPlugin({template: "src/index.html"}),
-    new CopyPlugin({
-      patterns: [
-        { from: 'src/assets/downloads', to: 'assets/downloads'},
-      ]
-    }),
-    new CleanWebpackPlugin(),
-  ],
-  devServer: {
-    // 404s fallback to root file
-    historyApiFallback: true,
-  }
 }
 
 if (currentTask === 'build') {
