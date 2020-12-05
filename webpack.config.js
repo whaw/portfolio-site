@@ -6,12 +6,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { POINT_CONVERSION_COMPRESSED } = require('constants');
 const currentTask = process.env.npm_lifecycle_event;
 const DIR_PATH = path.resolve(__dirname, 'dist');
+const webpack = require('webpack');
 
 const config = {
   entry: '/src/index.js',
   output: {
     filename: 'assets/js/bundle.[hash].js',
-    path: DIR_PATH
+    path: DIR_PATH,
   },
   devServer: {
     port: 3000,
@@ -19,6 +20,7 @@ const config = {
     historyApiFallback: true,
   },
   mode: 'development',
+  devtool: 'eval-cheap-source-map',
   plugins: [
     new MiniCssExtractPlugin({filename: 'assets/css/main.[hash].css'}),
     new HtmlWebpackPlugin({template: "src/index.html"}),
@@ -28,6 +30,11 @@ const config = {
       ]
     }),
     new CleanWebpackPlugin(),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      'window.jQuery': 'jquery',
+    }),
   ],
   module: {
     rules: [
@@ -59,12 +66,12 @@ const config = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: '/dist/',
+              publicPath: './',
               name() {
                 const imagePath = 'assets/images/';
-                // if (process.env.NODE_ENV === 'development') {
-                //   return `${imagePath}[name].[ext]`;
-                // }
+                if (process.env.NODE_ENV === 'development') {
+                  return `${imagePath}[name].[ext]`;
+                }
                 return `${imagePath}[name].[hash].[ext]`;
               },
             }
