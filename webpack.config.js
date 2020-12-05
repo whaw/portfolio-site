@@ -66,13 +66,12 @@ const config = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: './',
+              publicPath: '/',
               name() {
-                const imagePath = 'assets/images/';
                 if (process.env.NODE_ENV === 'development') {
-                  return `${imagePath}[name].[ext]`;
+                  return '[path][name].[ext]';
                 }
-                return `${imagePath}[name].[hash].[ext]`;
+                return '[path][name].[hash].[ext]';
               },
             }
           },
