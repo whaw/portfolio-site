@@ -26,7 +26,7 @@ const config = {
     new HtmlWebpackPlugin({template: "src/index.html"}),
     new CopyPlugin({
       patterns: [
-        { from: 'src/assets/downloads', to: 'assets/downloads'},
+        { from: 'src/assets/downloads', to: 'assets/downloads' },
       ]
     }),
     new CleanWebpackPlugin(),
@@ -66,12 +66,12 @@ const config = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: '/',
+              publicPath: '/dist/',
               name() {
                 if (process.env.NODE_ENV === 'development') {
-                  return '[path][name].[ext]';
+                  return `assets/images/[name].[ext]`;
                 }
-                return '[path][name].[hash].[ext]';
+                return `assets/images/[name].[hash].[ext]`;
               },
             }
           },
