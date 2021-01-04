@@ -30,7 +30,7 @@
     &:before,
     &:after {
       content: '';
-      background-image: url('../../assets/images/skills-dots.png');
+      background-image: url('../../assets/images/css-images/skills-dots.png');
       height: 100%;
       width: 100%;
       position: absolute;
@@ -39,7 +39,7 @@
       opacity: 0;
     }
     &:after {
-      background-image: url('../../assets/images/skills-shadow.png');
+      background-image: url('../../assets/images/css-images/skills-shadow.png');
     }
     @include media-breakpoint-up(lg){
       &.animate {

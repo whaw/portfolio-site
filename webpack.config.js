@@ -66,7 +66,7 @@ const config = {
           {
             loader: 'file-loader',
             options: {
-              publicPath: '/dist/',
+              publicPath: '/',
               name() {
                 if (process.env.NODE_ENV === 'development') {
                   return `assets/images/[name].[ext]`;
@@ -104,7 +104,7 @@ const config = {
 }
 
 if (currentTask === 'build') {
-  config.mode = 'production';
+  config.mode = 'development';
 }
 
 module.exports = config;
