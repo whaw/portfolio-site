@@ -3,20 +3,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { POINT_CONVERSION_COMPRESSED } = require('constants');
 const currentTask = process.env.npm_lifecycle_event;
-const DIR_PATH = path.resolve(__dirname, 'dist');
+const publicDirectoryRoot = path.resolve(__dirname, 'dist');
 const webpack = require('webpack');
 
 const config = {
   entry: '/src/index.js',
   output: {
     filename: 'assets/js/bundle.[hash].js',
-    path: DIR_PATH,
+    path: publicDirectoryRoot,
   },
   devServer: {
     port: 3000,
-    contentBase: DIR_PATH,
+    contentBase: publicDirectoryRoot,
     historyApiFallback: true,
   },
   mode: 'development',
@@ -66,11 +65,10 @@ const config = {
           {
             loader: 'file-loader',
             options: {
+              // set to deploy server setup
+              // github treats 'dist' folder as root, no need to state it in 'publicPath'
               publicPath: '/',
               name() {
-                if (process.env.NODE_ENV === 'development') {
-                  return `assets/images/[name].[ext]`;
-                }
                 return `assets/images/[name].[hash].[ext]`;
               },
             }
@@ -104,7 +102,7 @@ const config = {
 }
 
 if (currentTask === 'build') {
-  config.mode = 'development';
+  config.mode = 'production';
 }
 
 module.exports = config;
