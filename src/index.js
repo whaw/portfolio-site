@@ -1,5 +1,5 @@
 /* Javascript */
-import '/node_modules/bootstrap/js/dist/scrollspy.js';
+import '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 import '/src/assets/js/react/index';
 import '/src/assets/js/components/topBtn';
 import '/src/assets/js/modules/hero';
