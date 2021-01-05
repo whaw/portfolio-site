@@ -10,6 +10,6 @@ const SkillsAnim = Anim.create({
   }
 });
 
-$('document').ready(function(){
+$(function(){
   SkillsAnim.init();
-});
+})

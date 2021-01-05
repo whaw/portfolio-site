@@ -14,6 +14,6 @@ const HeroAnim = Anim.create({
   }
 });
 
-$('document').ready(function(){
+$(function() {
   HeroAnim.init();
 });

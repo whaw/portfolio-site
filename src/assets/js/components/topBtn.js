@@ -12,7 +12,7 @@ const topButton = {
   }
 }
 
-$(document).ready(function(){
+$(function() {
   topButton.showButton();
 
   $(window).on('scroll', function(){
