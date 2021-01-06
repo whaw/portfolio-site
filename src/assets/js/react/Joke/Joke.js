@@ -12,35 +12,47 @@ class Joke extends React.Component {
     this.setState(newState);
   }
 
-  getJoke(secondJoke = false){
-    fetch('https://icanhazdadjoke.com/', {
-      headers: { 
-          'Accept': 'application/json'
-        }
-      }
-    )
-    .then(result => {
-      if (result.ok) {
-        console.log('fetch ok');
+  handleLoadJokeClick(){
+    this.loadJoke();
+  }
+
+  generateErrorResponse(message){
+    return {
+      status: 'error',
+      message
+    }
+  }
+
+  async fetchJoke(){
+    const response = await fetch('https://icanhazdadjoke.com/', { headers: { 'Accept': 'application/json' }});
+
+    if (response.status !== 200 ){
+      console.log(`fetch error: ${response.statusText}`);
+      return this.generateErrorResponse('Sorry, please try again, icanhazdadjoke.com is not responding.');
+    }
+    return response.json();
+  }
+
+  async loadJoke(){
+    const errorMessage = 'Sorry, something went wrong. Please check back.';
+
+    try {
+      const data = await this.fetchJoke();
+
+      if (data.status === 'error'){
+        this.updateJoke(data.message);
       } else {
-        console.log('fetch failed')
+        this.updateJoke('“' + data.joke + '”');
       }
-      return result.json();
-    })
-    .then(data => {
-      this.updateJoke('“' + data.joke + '”');
-    })
-    .catch(error => {
-      console.log(error);
-      this.updateJoke('Sorry, something went wrong. Please check back. :(');
-    })
-    if (secondJoke === true) {
-      $('#get-joke-button').addClass('d-none');
+
+    } catch (error) {
+      console.log(`loadJoke try error: ${error}`);
+      this.updateJoke(errorMessage);
     }
   }
 
   componentDidMount() {
-    this.getJoke();
+    this.loadJoke();
   };
 
   render() {
@@ -52,7 +64,7 @@ class Joke extends React.Component {
       [
         e('p', {key: 1, className: 'font-italic'}, joke),
         e('p', {key: 2 }, '— icanhazdadjoke.com'),
-        e('button', { onClick: () => this.getJoke(true), className: 'btn btn-warning mt-3', key: 3, id: 'get-joke-button' }, 'Uno mas')
+        e('button', { onClick: () => this.loadJoke(), className: 'btn btn-warning mt-3', key: 3, id: 'get-joke-button' }, 'Uno mas')
       ]
     );
   }
