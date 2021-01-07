@@ -1,5 +1,7 @@
+
+// Just a little fun with React (wasn't really needed here)
+
 import React from 'react';
-const e = React.createElement;
 
 class Joke extends React.Component {
   constructor(props) {
@@ -12,10 +14,6 @@ class Joke extends React.Component {
     this.setState(newState);
   }
 
-  handleLoadJokeClick(){
-    this.loadJoke();
-  }
-
   generateErrorResponse(message){
     return {
       status: 'error',
@@ -23,21 +21,24 @@ class Joke extends React.Component {
     }
   }
 
-  async fetchJoke(){
-    const response = await fetch('https://icanhazdadjoke.com/', { headers: { 'Accept': 'application/json' }});
+  // Enhancement: build out fetch util to support all request types and make standalone.
+  
+  async fetchData(url){
+    const response = await fetch(url, { headers: { 'Accept': 'application/json' }});
 
     if (response.status !== 200 ){
       console.log(`fetch error: ${response.statusText}`);
-      return this.generateErrorResponse('Sorry, please try again, icanhazdadjoke.com is not responding.');
+      return this.generateErrorResponse('Sorry, the resource appears to be unavailable. Please check back.');
     }
-    return response.json();
+    return await response.json();
   }
 
   async loadJoke(){
+    const apiUrl = 'https://icanhazdadjoke.com/';
     const errorMessage = 'Sorry, something went wrong. Please check back.';
 
     try {
-      const data = await this.fetchJoke();
+      const data = await this.fetchData(apiUrl);
 
       if (data.status === 'error'){
         this.updateJoke(data.message);
@@ -58,15 +59,13 @@ class Joke extends React.Component {
   render() {
     const joke = this.state.joke;
 
-    return e(
-      'div',
-      null,
-      [
-        e('p', {key: 1, className: 'font-italic'}, joke),
-        e('p', {key: 2 }, '— icanhazdadjoke.com'),
-        e('button', { onClick: () => this.loadJoke(), className: 'btn btn-warning mt-3', key: 3, id: 'get-joke-button' }, 'Uno mas')
-      ]
-    );
+    return (
+      <>
+        <p>{joke}</p>
+        <p>— icanhazdadjoke.com</p>
+        <button onClick={() => this.loadJoke()} className='btn btn-warning mt-3'>Uno mas</button>
+      </>
+    )
   }
 }
 
