@@ -1,5 +1,9 @@
 import Anim from '/src/assets/js/modules/anim';
 
+// Left this unpacked here for higher priorities +
+// it allows for more flexibility as aniamations are works in progress.
+// May refactor Anim class later to not need this.
+
 const HeroAnim = Anim.create({
   animElements: ['js_frame', 'js_rider', 'js_pin', 'js_logo', 'js_hero'],
   animContainer: '.js_hero',
@@ -14,6 +18,4 @@ const HeroAnim = Anim.create({
   }
 });
 
-$(function() {
-  HeroAnim.init();
-});
+export default HeroAnim;
